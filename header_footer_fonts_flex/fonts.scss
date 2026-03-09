@@ -1,0 +1,92 @@
+.font-base{
+    font-family: 'Roboto', sans-serif;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+.header_font_white{
+    @extend .font-base;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+.top_categories_links{
+    @extend .font-base;
+    font-weight: 400;
+    font-size: 14px;
+}
+.title_font, .info h3{
+    @extend .font-base;
+    font-weight: 600;
+    font-size: 24px;
+    color: #333333;
+    margin: 6px 0 22px 0;
+    line-height:1.2;
+}
+.item_name_font, .info p, .info ul li, .info ol li{
+    @extend .title_font;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.price_font{
+    @extend .font-base;
+    font-weight: 700;
+    font-size: 20px;
+}
+.price-old{
+    font-size: 12px;
+    text-decoration:line-through;
+    color: #ACACAC;
+}
+.price-current{
+    @extend .font-base;
+    color:#e53935;
+    font-size:22px;
+    font-weight:700;
+}
+.meta_font{
+    @extend .font-base;
+    font-weight: 500;
+    font-size: 10px;
+    color: #ACACAC;
+}
+.categories_font{
+    @extend .font-base;
+    font-weight: 400;
+    font-size: 14px;
+    a{
+        text-decoration: none;
+        color: #ACACAC;
+    }
+}
+.categories_animal_font{
+    @extend .font-base;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+
+}
+.categories_more_font{
+    @extend .categories_animal_font;
+    color: #2A7CF9 !important;
+    font-size: 14px;
+}
+
+.info p, .info ul li, .info ol li{
+    font-weight: 500;
+    color: #333333;
+}
+
+.title_font_footer{
+    @extend .title_font;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.text_font_footer{
+    @extend .top_categories_links;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+}

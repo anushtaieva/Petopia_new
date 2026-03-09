@@ -1,0 +1,52 @@
+.footer{
+    .footer_line{
+        background-color: #2A7CF9;
+        height: 6px;
+        border: 1px solid #2A7CF9;
+
+    }
+    margin: auto;
+    background-color: #31435E;
+    .footer_content{
+        max-width: 1300px;
+        margin: auto;
+        padding: 40px 0 40px 0;
+        gap: 230px;
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+            a:hover{
+                color: #ffffffd0;
+            }
+        ul{
+            columns: 2;
+            column-gap: 40px;
+            li{
+                margin-bottom: 10px;
+            }
+        }
+        %icon{
+            display: inline-block;
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+            align-self: center;
+        }
+
+        .geo::before{
+            @extend %icon;
+            background-image: url(../header_footer_fonts_flex/images/footer/footer_icon_geo.png);
+        }
+
+        .phone::before{
+            @extend %icon;
+            background-image: url(../header_footer_fonts_flex/images/footer/footer_icon_phone.png);
+        }
+    }
+
+}
