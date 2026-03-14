@@ -1,0 +1,112 @@
+.footer{
+    .footer_line{
+        background-color: #2A7CF9;
+        height: 6px;
+        border: 1px solid #2A7CF9;
+
+    }
+    margin: auto;
+    background-color: #31435E;
+    margin-top: 30px;
+    .footer_content{
+        max-width: 1300px;
+        margin: auto;
+        padding: 40px 0 40px 0;
+        gap: 230px;
+        p{
+            min-width: 150px;
+        }
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+            a:hover{
+                color: #ffffffd0;
+            }
+        ul{
+            list-style: none;
+            columns: 2;
+            column-gap: 40px;
+            li{
+                margin-bottom: 10px;
+                min-width: 200px;
+            }
+        }
+        %icon{
+            display: inline-block;
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+            align-self: center;
+        }
+
+        .geo::before{
+            @extend %icon;
+            background-image: url(../header_footer_fonts_flex/images/footer/footer_icon_geo.png);
+        }
+
+        .phone::before{
+            @extend %icon;
+            background-image: url(../header_footer_fonts_flex/images/footer/footer_icon_phone.png);
+        }
+    }
+
+}
+
+// АДАПТИВ
+@media (max-width: 1440px) {
+    .footer .footer_content {
+        padding: 30px 40px;
+        gap: 50px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 900px){
+    .footer_content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer_contacts{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer_dop{
+        margin-top: -50px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .footer_info{
+        grid-column: 2;
+        grid-row: 1 / 3;
+        ul{
+            columns: 1 !important;
+        }
+    }
+
+}
+
+@media (max-width: 500px) {
+    .text_font_footer{
+        font-size: 10px;
+    }
+    .footer .footer_content {
+        padding: 25px 20px;
+
+        ul li {
+            min-width: auto;
+        }
+
+        p {
+            min-width: auto;
+        }
+    }
+}
