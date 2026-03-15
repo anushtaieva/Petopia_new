@@ -1,21 +1,51 @@
 //кнопки для верхнего баннера
-const slides = document.querySelector('.slides');
-const slideCount = document.querySelectorAll('.slide').length;
-let index = 0;
+document.addEventListener("DOMContentLoaded", () => {
 
-document.querySelector('.next').addEventListener('click', () => {
-  index = (index + 1) % slideCount;
-  updateSlide();
+  const slides = document.querySelector(".top_banners_carusel_slides");
+  const slideItems = document.querySelectorAll(".slide");
+  const next = document.querySelector(".next");
+  const prev = document.querySelector(".prev");
+  const dotsContainer = document.querySelector(".dots");
+
+  let index = 0;
+  const slideCount = slideItems.length;
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+
+    document.querySelectorAll(".dot").forEach(dot =>
+      dot.classList.remove("active")
+    );
+
+    document.querySelectorAll(".dot")[index].classList.add("active");
+  }
+
+  next.addEventListener("click", () => {
+    index = (index + 1) % slideCount;
+    updateSlide();
+  });
+
+  prev.addEventListener("click", () => {
+    index = (index - 1 + slideCount) % slideCount;
+    updateSlide();
+  });
+
+  // создаём точки
+  for (let i = 0; i < slideCount; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+
+    if (i === 0) dot.classList.add("active");
+
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlide();
+    });
+
+    dotsContainer.appendChild(dot);
+  }
+
 });
-
-document.querySelector('.prev').addEventListener('click', () => {
-  index = (index - 1 + slideCount) % slideCount;
-  updateSlide();
-});
-
-function updateSlide() {
-  slides.style.transform = `translateX(-${index * 100}%)`;
-}
 
 //счетчик в карточке товара
 const counters = document.querySelectorAll('.counter');

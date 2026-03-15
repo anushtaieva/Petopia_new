@@ -87,7 +87,7 @@
   }
   .about_text .about_text_title {
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 10px;
   }
   .menu {
     padding: 80px 14px 10px 14px;
