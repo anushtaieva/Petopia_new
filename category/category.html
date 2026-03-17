@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header_footer_fonts_flex/flex.css">
+    <link rel="stylesheet" href="../header_footer_fonts_flex/fonts.css">
+    <link rel="stylesheet" href="../header_footer_fonts_flex/header.css">
+    <link rel="stylesheet" href="../header_footer_fonts_flex/footer.css">
+    <link rel="stylesheet" href="./category.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Товари для собак</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header_content fx-jc-sb fx-ai-c">
+            <a href="../main/main.html"><img src="../header_footer_fonts_flex/images/header/logo.png"></a>
+            <div class="header_content_catalog fx-jc-sb fx-ai-c">
+                <img src="../header_footer_fonts_flex/images/header/сategory.png">
+                <p class="header_font_white">Каталог</p>
+            </div>
+            <div class="header_content_search fx-row">
+                <input type="text" placeholder="Пошук">
+                <button class="header_font_white fx-ai-c fx-jc-sb">
+                    <p>Знайти</p>
+                    <img src="../header_footer_fonts_flex/images/header/search.png">
+                </button>
+            </div>
+            <div class="header_content_menu fx-jc-sb">
+                <div class="header_content_menu_info">
+                    <img src="../header_footer_fonts_flex/images/header/info-square.png">
+                    <a href="#"href="#">Інформація</a>
+                </div>
+                <div class="header_content_menu_info">
+                    <img src="../header_footer_fonts_flex/images/header/truck-delivery.png">
+                    <a href="#"href="#">Доставка</a>
+                </div>
+                <div class="header_content_menu_info">
+                    <img src="../header_footer_fonts_flex/images/header/call.png">
+                    <a href="#"href="#">Контакти</a>
+                </div>
+                <div class="header_content_menu_info">
+                    <img src="../header_footer_fonts_flex/images/header/buy.png">
+                    <a href="#"href="#">Кошик</a>
+                </div>
+                <div class="header_content_menu_info">
+                    <img src="../header_footer_fonts_flex/images/header/profile.png">
+                    <a href="#"href="#">Кабінет</a>
+                </div>
+            </div>
+        </div>
+        <div class="header_content_adaptiv fx-jc-sb">
+            <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-burger-menu.svg">
+            <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-logo.png">
+            <input type="text" class="search_input">
+            <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-buy.png">
+        </div>
+        <div class="header_line"></div>
+    </div>
+
+    <div class="catalog_adaptiv">
+        <div class="catalog_adaptiv_content fx-ai-c fx-jc-sb">
+            <p class="header_font_white">Каталог товарів</p>
+            <img src="./images/arrow-down.png">
+        </div>
+    </div>
+
+    <div class="menu fx-jc-sb fx-ai-c">
+        <div class="menu_text fx-jc-sb fx-ai-c">
+            <a href="../main/main.html" class="categories_more_font">Головна</a>
+            <img src="./images/arrow_right.png">
+            <a class="categories_more_font">Для собак</a>
+            <img src="./images/arrow_right.png">
+            <p class="categories_more_font">Корм</p>
+        </div>
+        <div class="menu_button"><a class="header_font_white" onclick="history.back()">Назад</a></div>
+    </div>
+    <div class="menu_filter fx-jc-sb fx-ai-c">
+        <div class="menu_filter_text fx-jc-sb">
+            <h3 class="title_font ">Товари для собак</h3>
+            <p class="categories_font amount">95 товарів</p>
+        </div>
+
+        <div class="filter_adaptiv">
+            <div class="filter_adaptiv_content fx-c">
+                <p class="header_font_white">Фільтр товарів</p>
+            </div>
+        </div>
+        
+        <div class="menu_filter_select categories_more_font">
+            <div class="select">
+            <span class="select-label">Показати:</span>
+            <div class="select-btn">100</div>
+            <div class="select-list">
+                <div class="select-item">15</div>
+                <div class="select-item">25</div>
+                <div class="select-item">50</div>
+                <div class="select-item">75</div>
+                <div class="select-item">100</div>
+            </div>
+            </div>
+
+            <div class="select">
+            <span class="select-label">Сортування:</span>
+            <div class="select-btn large">За замовчуванням</div>
+            <div class="select-list">
+                <div class="select-item">За замовчуванням</div>
+                <div class="select-item">За назвою (А-Я)</div>
+                <div class="select-item">За назвою (Я-А)</div>
+                <div class="select-item">Ціна (за збільшенням)</div>
+                <div class="select-item">Ціна (за зменшенням)</div>
+                <div class="select-item">Рейтинг (за збільшенням)</div>
+                <div class="select-item">Рейтинг (за зменшенням)</div>
+                <div class="select-item">Модель (А-Я)</div>
+                <div class="select-item">Модель (Я-А)</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu_line"></div>
+
+    <div class="filter-items fx-jc-sb">
+        <div class="sidebar">
+        <div class="selected">
+            <p><strong>Ви вибрали:</strong></p>
+            <p>Тип корму: <span>Вологий корм</span><span>Консерви</span><span>Ласощі</span></p>
+            <p>Наявність: <span>Є в наявності</span></p>
+            <button class="reset">Скинути</button>
+        </div>
+
+        <!-- Filter block -->
+        <div class="filter">
+            <div class="filter-header">Наявність</div>
+            <div class="filter-body">
+            <label><input type="checkbox"> Є в наявності</label>
+            </div>
+        </div>
+
+        <div class="filter">
+            <div class="filter-header">Ціна</div>
+            <div class="filter-body">
+            <div class="price-inputs">
+                <input type="text" value="3,0 ₴">
+                <input type="text" value="25885,2 ₴">
+            </div>
+            <input type="range" min="0" max="30000">
+            </div>
+        </div>
+
+        <div class="filter">
+            <div class="filter-header">Тип корму</div>
+            <div class="filter-body">
+            <label><input type="checkbox"> Влажный корм</label>
+            <label><input type="checkbox"> Заменитель молока</label>
+            <label><input type="checkbox"> Консервы</label>
+            <label><input type="checkbox"> Лакомства</label>
+            <label><input type="checkbox"> Полувлажные лакомства</label>
+            <label><input type="checkbox"> Полувлажный корм</label>
+            <label><input type="checkbox"> Сухой корм</label>
+            </div>
+        </div>
+
+        <!-- Повторяющиеся секции -->
+        <div class="filter">
+            <div class="filter-header">Вага</div>
+            <div class="filter-body"></div>
+        </div>
+
+        <div class="filter">
+            <div class="filter-header">Вік</div>
+            <div class="filter-body"></div>
+        </div>
+        </div>
+        <div class="items"></div>
+    </div>
+    
+    <!-- ФУТЕР -->
+    <div class="footer">
+        <div class="footer_line"></div>
+        <div class="footer_content fx-row">
+            <div class="footer_contacts">
+                <h3 class="title_font_footer">Контакти</h3>
+                <p class="geo text_font_footer">Україна, Дніпро</p>
+                <p class="phone text_font_footer">+38 (067) 620-16-37</p>
+            </div>
+            <div class="footer_info">
+                <h3 class="title_font_footer">Інформація</h3>
+                <ul class="text_font_footer">
+                    <li><a href="../about shop/about_shop.html">Про магазин</a></li>
+                    <li><a href="../user_agreement/user_agreement.html">Угода користувача</a></li>
+                    <li><a href="../terms_of_ordering/terms_of_ordering.html">Умови оформлення замовлення</a></li>
+                    <li><a href="../security_policy/security_policy.html">Політика безпеки</a></li>
+                    <li><a href="../delivery_and_payment/delivery_and_payment.html">Доставка та оплата</a></li>
+                    <li><a href="../return_and_exchange/return_and_exchange.html">Повернення та обмін товарів</a></li>
+                    <li><a href="../loyalty_program/loyalty_program.html">Програма лояльності</a></li>
+                    <li><a href="#">Зворотній заязок</a></li>
+                </ul>
+            </div>
+            <div class="footer_dop">
+                <h3 class="title_font_footer">Додатково</h3>
+                <p class="text_font_footer"><a href="#">Карта сайту</a></p>
+                <p class="text_font_footer"><a href="#">Акції</a></p>
+            </div>
+        </div>
+    </div>
+<script src="./category.js"></script>
+</body>
+</html>
