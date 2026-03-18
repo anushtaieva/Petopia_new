@@ -120,59 +120,82 @@
     </div>
     <div class="menu_line"></div>
 
-    <div class="filter-items fx-jc-sb">
+    <div class="filter-items fx-row">
         <div class="sidebar">
-        <div class="selected">
-            <p><strong>Ви вибрали:</strong></p>
-            <p>Тип корму: <span>Вологий корм</span><span>Консерви</span><span>Ласощі</span></p>
-            <p>Наявність: <span>Є в наявності</span></p>
-            <button class="reset">Скинути</button>
-        </div>
+            <div class="selected">
+                <h3 class="article_title"><strong>Ви вибрали:</strong></h3>
+                <p class="top_categories_links">Тип корму: <span>Вологий корм</span><span>Консерви</span><span>Ласощі</span></p>
+                <p class="top_categories_links">Наявність: <span>Є в наявності</span></p>
+                <button class="reset header_font_white">Скинути</button>
+                <div class="attribute_line"></div>
+            </div>
 
-        <!-- Filter block -->
-        <div class="filter">
-            <div class="filter-header">Наявність</div>
-            <div class="filter-body">
-            <label><input type="checkbox"> Є в наявності</label>
+            <!-- Filter block -->
+            <div class="filter">
+                <div class="filter-header article_title">Наявність</div>
+                <div class="filter-body">
+                <label><input type="checkbox"><p class="top_categories_links">Є в наявності</p></label>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="filter-header article_title">Ціна</div>
+                <div class="filter-body">
+                <div class="price-inputs">
+                    <input type="text" value="3,0 ₴">
+                    <input type="text" value="25885,2 ₴">
+                </div>
+                <input type="range" min="0" max="30000">
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="filter-header article_title">Безкоштовна доставка</div>
+                <div class="filter-body">
+                <label><input type="checkbox">Так</label>
+                <label><input type="checkbox">Ні</label>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="filter-header article_title">Виробник</div>
+                <div class="filter-body">
+
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="filter-header article_title">Тип корму</div>
+                <div class="filter-body">
+                <label><input type="checkbox"> Влажный корм</label>
+                <label><input type="checkbox"> Заменитель молока</label>
+                <label><input type="checkbox"> Консервы</label>
+                <label><input type="checkbox"> Лакомства</label>
+                <label><input type="checkbox"> Полувлажные лакомства</label>
+                <label><input type="checkbox"> Полувлажный корм</label>
+                <label><input type="checkbox"> Сухой корм</label>
+                </div>
+            </div>
+
+            <!-- Повторяющиеся секции -->
+            <div class="filter">
+                <div class="filter-header article_title">Вага</div>
+                <div class="filter-body"></div>
+            </div>
+
+            <div class="filter">
+                <div class="filter-header article_title">Вік</div>
+                <div class="filter-body"></div>
             </div>
         </div>
-
-        <div class="filter">
-            <div class="filter-header">Ціна</div>
-            <div class="filter-body">
-            <div class="price-inputs">
-                <input type="text" value="3,0 ₴">
-                <input type="text" value="25885,2 ₴">
+        
+        <div class="items">
+            <div class="items_categories">
+                
             </div>
-            <input type="range" min="0" max="30000">
-            </div>
-        </div>
+            <div id="products_grid" class="products_grid"></div>
 
-        <div class="filter">
-            <div class="filter-header">Тип корму</div>
-            <div class="filter-body">
-            <label><input type="checkbox"> Влажный корм</label>
-            <label><input type="checkbox"> Заменитель молока</label>
-            <label><input type="checkbox"> Консервы</label>
-            <label><input type="checkbox"> Лакомства</label>
-            <label><input type="checkbox"> Полувлажные лакомства</label>
-            <label><input type="checkbox"> Полувлажный корм</label>
-            <label><input type="checkbox"> Сухой корм</label>
-            </div>
         </div>
-
-        <!-- Повторяющиеся секции -->
-        <div class="filter">
-            <div class="filter-header">Вага</div>
-            <div class="filter-body"></div>
-        </div>
-
-        <div class="filter">
-            <div class="filter-header">Вік</div>
-            <div class="filter-body"></div>
-        </div>
-        </div>
-        <div class="items"></div>
     </div>
     
     <!-- ФУТЕР -->
