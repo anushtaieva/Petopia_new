@@ -52,16 +52,30 @@ counters.forEach(counter => {
   });
 });
 
-// для галочки чекбокса
-document.querySelectorAll('.filter-body p input[type="checkbox"]').forEach(cb => {
-  cb.addEventListener('change', function() {
-    if (this.checked) {
-      this.parentElement.classList.add('checked');
-    } else {
-      this.parentElement.classList.remove('checked');
-    }
+// для категорий
+  const containerCategory = document.querySelector('.items_categories');
+
+  containerCategory.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('category')) return;
+
+    containerCategory.querySelectorAll('.category')
+      .forEach(el => el.classList.remove('active'));
+
+    e.target.classList.add('active');
   });
-});
+
+
+//для пагинации
+  const pages = document.querySelectorAll('.bottom_products .page');
+
+  pages.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('next')) return;
+
+      pages.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
 
 
 

@@ -488,7 +488,37 @@
   font-size: 12px !important;
 }
 
-.items{
+
+.items_categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1056px;
+  padding: 20px 0 20px 20px ;
+
+  .category {
+    padding: 8px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    font-weight: 400;
+
+    &:hover {
+      background: #eaeaea;
+    }
+
+    &.active {
+      background: #fff;
+      border-color: #4a90e2;
+    }
+  }
+}
+
+
   .more{
     width: 114px;
     height: 32px;
@@ -498,6 +528,49 @@
     color: #FFFFFF;
     font-size: 12px;
     font-weight: 600;
+  }
+
+.bottom_products {
+  text-align: center;
+  margin-top: 20px;
+
+  .pagination {
+    display: inline-flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    max-width: 490px;
+    max-height: 40px;
+    .page {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ddd;
+      background: none;
+      border-radius: 8px;
+      color: #2A7CF9;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #e6e6e6;
+      }
+
+      &.active {
+        background: #2f6fed;
+        color: #fff;
+        border-color: #2f6fed;
+      }
+
+      &.next {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .pagination-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #888;
   }
 }
 
@@ -535,6 +608,21 @@
     .filter_adaptiv{
         display: flex;
     }
+    .sidebar{
+      display: none;
+    }
+    .filter-items{
+      padding:14px;
+      .items_categories{
+        padding: 0;
+      }
+      .products_grid{
+        padding: 24px 0 0 0;
+        .product_card{
+          min-width: 171px;
+        }
+      }
+    }
 
 }
 
@@ -551,7 +639,4 @@
       grid-template-columns: repeat(2, 1fr); // 2 товара в строке
     }
 
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr; // на маленьких экранах 1 товар в строке
-    }
 }
