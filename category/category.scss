@@ -205,6 +205,9 @@
       color: #2a6df4;
       font-size: 12px;
       line-height: 20px;
+      p{
+        line-height: 12px;
+      }
       span{
         color: #333333;
         gap: 4px;
@@ -254,50 +257,68 @@
     .filter-header{
       margin: 10px 0;
     }
-    .filter-body {
-      input[type="checkbox"] {
-        display: none; // скрываем стандартный чекбокс
+.filter-body {
+  input[type="checkbox"] {
+        display: none; // прячем стандартный чекбокс
+  }
+  .top_categories_links{
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  p {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    // квадрат чекбокса
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      border: 1px solid #E2E2E2;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+
+    // галочка
+    &::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      opacity: 0;
+    }
+
+    // если чекбокс выбран
+    input[type="checkbox"]:checked + & {
+      &::before {
+        background-color: #007BFF;
+        border-color: #007BFF;
       }
 
-      p {
-        position: relative;
-        padding-left: 20px; // отступ под квадрат
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 14px;
-          height: 14px;
-          border: 1px solid #E2E2E2;
-          border-radius: 4px; // скругление если нужно
-          background-color: white;
-        }
-
-        input[type="checkbox"]:checked + &::before {
-          background-color: #007BFF; // цвет галочки или фона
-          border-color: #007BFF;
-        }
-
-        // галочка
-        input[type="checkbox"]:checked + &::after {
-          content: "";
-          position: absolute;
-          left: 3px;
-          top: 0px;
-          width: 5px;
-          height: 10px;
-          border: solid white;
-          border-width: 0 2px 2px 0;
-          transform: rotate(45deg);
-        }
+      &::after {
+        opacity: 1;
       }
     }
+  }
+}
 
     &.active {
       .filter-body {
         display: block;
+      }
+      .filter-header {
+        &::after {
+          background-image: url('./images/arrow_up_blue.png');
+        }
       }
     }
 
@@ -307,9 +328,16 @@
       position: relative;
 
       &::after {
-        content: "▾";
-        position: absolute;
-        right: 0;
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+            width: 16px;
+            height: 16px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('./images/arrow_down_blue.png');
       }
     }
 
@@ -455,6 +483,23 @@
 
 }
 
+.filter-body .top_categories_links .amount {
+  color: #ACACAC !important;
+  font-size: 12px !important;
+}
+
+.items{
+  .more{
+    width: 114px;
+    height: 32px;
+    background-color: #2A7CF9;
+    border-radius: 6px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
 
 
   @media (max-width: 900px) {

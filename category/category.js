@@ -52,6 +52,17 @@ counters.forEach(counter => {
   });
 });
 
+// для галочки чекбокса
+document.querySelectorAll('.filter-body p input[type="checkbox"]').forEach(cb => {
+  cb.addEventListener('change', function() {
+    if (this.checked) {
+      this.parentElement.classList.add('checked');
+    } else {
+      this.parentElement.classList.remove('checked');
+    }
+  });
+});
+
 
 
 //повторение товаров ПРОСТО ЧТОБЫ ГЛЯНУТЬ ВЕРСТКУ
