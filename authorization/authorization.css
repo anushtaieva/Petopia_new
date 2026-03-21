@@ -1,0 +1,94 @@
+.authorization {
+  max-width: 1440px;
+  padding: 126px 70px 20px 70px;
+  margin: auto;
+}
+
+.authorization .authorization_form {
+  border: 1px solid #2A7CF9;
+  padding: 20px 40px;
+  border-radius: 6px;
+}
+
+.authorization .authorization_form .authorization_form_enter {
+  height: 50%;
+}
+
+.authorization .authorization_form .authorization_form_enter .line {
+  width: 100%;
+  border-bottom: 1px solid #E2E2E2;
+}
+
+.authorization .authorization_form .authorization_form_enter .price_font {
+  font-size: 36px;
+  color: #2A7CF9;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.authorization .authorization_form .authorization_form_enter .article_title {
+  margin: auto;
+  text-align: center;
+  line-height: 16px;
+}
+
+.authorization .authorization_form .authorization_form_enter .top_categories_links {
+  color: #333333;
+}
+
+.authorization .authorization_form .authorization_form_enter .header_font_white {
+  color: #FFFFFF !important;
+  font-weight: 500;
+}
+
+.authorization .authorization_form .authorization_form_enter .button_authorization {
+  width: 100%;
+  max-width: 376px;
+  height: 44px;
+  border: 1px solid #E2E2E2;
+  margin: 10px 0;
+  border-radius: 6px;
+  padding: 10px;
+  color: #333333;
+  font-size: 12px;
+}
+
+.authorization .authorization_form .authorization_form_enter .kod {
+  border: 1px solid #CA3636;
+}
+
+.authorization .authorization_form .authorization_form_enter .kod_povtorno, .authorization .authorization_form .authorization_form_enter .kod_povtorno_blue {
+  color: #B1B5B8 !important;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  margin: 0 auto 0;
+}
+
+.authorization .authorization_form .authorization_form_enter .kod_povtorno_blue {
+  color: #2A7CF9 !important;
+}
+
+.authorization .authorization_form .authorization_form_enter .submit_form {
+  margin: 10px 0 20px 0;
+  background-color: #E2E2E2;
+  height: 44px;
+  padding: 10px;
+}
+
+.authorization .authorization_form .authorization_form_google .button_google {
+  width: 100%;
+  max-width: 376px;
+  height: 44px;
+  background-color: #2A7CF9;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 0;
+  padding: 2px;
+  color: #FFFFFF;
+}
+
+.authorization .authorization_form .authorization_form_google .button_google p {
+  margin: auto;
+}
+/*# sourceMappingURL=authorization.css.map */

@@ -1,0 +1,82 @@
+.authorization{
+    max-width: 1440px;
+    padding: 126px 70px 20px 70px;
+    margin: auto;
+    .authorization_form{
+        border: 1px solid #2A7CF9;
+        padding: 20px 40px;
+        border-radius: 6px;
+        .authorization_form_enter{
+            height: 50%;
+            .line{
+                width: 100%;
+                border-bottom: 1px solid #E2E2E2;
+            }
+            .price_font{
+                font-size: 36px;
+                color: #2A7CF9;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+            .article_title{
+                margin: auto;
+                text-align: center;
+                line-height: 16px;
+            }
+            .top_categories_links{
+                color: #333333;
+            }
+            .header_font_white{
+                color: #FFFFFF !important;
+                font-weight: 500;
+            }
+            .button_authorization{
+                width: 100%;
+                max-width: 376px;
+                height: 44px;
+                border: 1px solid #E2E2E2;
+                margin: 10px 0;
+                border-radius: 6px;
+                padding: 10px;
+                color: #333333;
+                font-size: 12px;
+            }
+            .kod{
+                border: 1px solid #CA3636;
+            }
+            .kod_povtorno {
+                color: #B1B5B8 !important;
+                font-size: 12px;
+                text-align: center;     // центрирует текст по горизонтали
+                display: block;         // гарантируем, что элемент блочный
+                margin: 0 auto 0;    // авто-смещение по бокам для горизонтального центрирования
+            }
+            .kod_povtorno_blue{
+                @extend .kod_povtorno;
+                color: #2A7CF9 !important;
+            }
+            .submit_form{
+                margin: 10px 0 20px 0;
+                background-color: #E2E2E2;
+                height: 44px;
+                padding: 10px;
+            }
+        }
+        .authorization_form_google{
+            .button_google{
+                width: 100%;
+                max-width: 376px;
+                height: 44px;
+                background-color: #2A7CF9;
+                margin-top: 10px;
+                border-radius: 6px;
+                border: 0;
+                padding: 2px;
+                color: #FFFFFF;
+                p{
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

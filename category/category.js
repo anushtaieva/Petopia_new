@@ -32,6 +32,52 @@ document.querySelectorAll(".filter-header").forEach(header => {
     });
 });
 
+//для инпута цены
+const minRange = document.getElementById("rangeMin");
+const maxRange = document.getElementById("rangeMax");
+const minInput = document.getElementById("minPrice");
+const maxInput = document.getElementById("maxPrice");
+const fill = document.getElementById("rangeFill");
+
+const minGap = 50;
+
+function format(value) {
+  return value.toLocaleString('uk-UA') + " ₴";
+}
+
+function updateSlider() {
+  let min = parseInt(minRange.value);
+  let max = parseInt(maxRange.value);
+
+  const percentMin = (min / minRange.max) * 100;
+  const percentMax = (max / maxRange.max) * 100;
+
+  fill.style.left = percentMin + "%";
+  fill.style.width = (percentMax - percentMin) + "%";
+
+  minInput.value = format(min);
+  maxInput.value = format(max);
+}
+
+// двигаем левый
+minRange.addEventListener("input", () => {
+  if (+maxRange.value - +minRange.value < minGap) {
+    minRange.value = +maxRange.value - minGap;
+  }
+  updateSlider();
+});
+
+// двигаем правый
+maxRange.addEventListener("input", () => {
+  if (+maxRange.value - +minRange.value < minGap) {
+    maxRange.value = +minRange.value + minGap;
+  }
+  updateSlider();
+});
+
+// init
+updateSlider();
+
 
 //счетчик в карточке товара
 const counters = document.querySelectorAll('.counter');
@@ -76,6 +122,40 @@ counters.forEach(counter => {
       btn.classList.add('active');
     });
   });
+
+//для адаптива пагинации
+function adaptPagination(maxVisible) {
+  const pagination = document.querySelector(".bottom_products .pagination");
+  if (!pagination) return;
+
+  const pages = Array.from(pagination.querySelectorAll(".page:not(.next)"));
+  const total = pages.length;
+
+  pages.forEach((page, idx) => {
+    if (total <= maxVisible) {
+      page.style.display = "flex"; // показываем все
+    } else {
+      if (idx < maxVisible) {
+        page.style.display = "flex"; // показываем первые maxVisible
+      } else {
+        page.style.display = "none"; // скрываем лишние
+      }
+    }
+  });
+}
+
+// Инициализация
+function updatePagination() {
+  if (window.innerWidth < 900) {
+    adaptPagination(6); // мобильные
+  } else {
+    adaptPagination(9); // десктоп
+  }
+}
+
+// Срабатывает при загрузке и при ресайзе
+window.addEventListener("load", updatePagination);
+window.addEventListener("resize", updatePagination);
 
 
 

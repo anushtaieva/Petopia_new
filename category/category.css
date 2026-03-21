@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .menu {
   padding: 106px 70px 10px 70px;
   max-width: 1440px;
@@ -288,60 +289,156 @@
   margin: 10px 0;
 }
 
-.sidebar .filter .filter-body input[type="checkbox"] {
+.sidebar .filter .filter-body .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.sidebar .filter .filter-body .checkbox input {
   display: none;
 }
 
-.sidebar .filter .filter-body .top_categories_links {
-  font-size: 12px;
-  margin-top: 12px;
-}
-
-.sidebar .filter .filter-body p {
+.sidebar .filter .filter-body .checkbox span {
   position: relative;
-  padding-left: 20px;
-  cursor: pointer;
+  padding-left: 22px;
+  width: 100%;
 }
 
-.sidebar .filter .filter-body p::before {
+.sidebar .filter .filter-body .checkbox span::before {
   content: "";
   position: absolute;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border: 1px solid #E2E2E2;
   border-radius: 4px;
-  background-color: #fff;
+  background: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.sidebar .filter .filter-body p::after {
+.sidebar .filter .filter-body .checkbox span::after {
   content: "";
   position: absolute;
   left: 4px;
   top: 50%;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #FFE158;
+  border-radius: 50%;
   opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-input[type="checkbox"]:checked + .sidebar .filter .filter-body p::before {
-  background-color: #007BFF;
-  border-color: #007BFF;
+.sidebar .filter .filter-body .checkbox input:checked + span::before {
+  background: #2A7CF9;
+  border-color: #2A7CF9;
 }
 
-input[type="checkbox"]:checked + .sidebar .filter .filter-body p::after {
+.sidebar .filter .filter-body .checkbox input:checked + span::after {
   opacity: 1;
+}
+
+.sidebar .filter .filter-body .price-filter {
+  width: 100%;
+  /* INPUTS */
+  /* RANGE */
+}
+
+.sidebar .filter .filter-body .price-filter .price-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.sidebar .filter .filter-body .price-filter .price-inputs input {
+  width: 100%;
+  height: 26px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid #E2E2E2;
+  border-radius: 6px;
+  color: #333;
+}
+
+.sidebar .filter .filter-body .price-filter .range {
+  position: relative;
+  height: 20px;
+  /* скрываем дефолт */
+}
+
+.sidebar .filter .filter-body .price-filter .range .slider {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sidebar .filter .filter-body .price-filter .range .slider .track {
+  height: 3px;
+  border-radius: 3px;
+}
+
+.sidebar .filter .filter-body .price-filter .range .slider .range-fill {
+  position: absolute;
+  height: 3px;
+  background: #2A7CF9;
+  border-radius: 3px;
+  top: 0;
+}
+
+.sidebar .filter .filter-body .price-filter .range input[type="range"] {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 20px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  /* ТОЧКИ — как на скрине */
+}
+
+.sidebar .filter .filter-body .price-filter .range input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 10px;
+  height: 10px;
+  background: #2A7CF9;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.sidebar .filter .filter-body .price-filter .range input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  width: 10px;
+  height: 10px;
+  background: #2A7CF9;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
 
 .sidebar .filter.active .filter-body {
   display: block;
+  margin-top: 15px;
 }
 
 .sidebar .filter.active .filter-header::after {
@@ -395,7 +492,7 @@ input[type="checkbox"]:checked + .sidebar .filter .filter-body p::after {
   display: -ms-grid;
   display: grid;
   max-width: 1056px;
-  padding: 20px 0 20px 20px;
+  padding: 0 0 20px 20px;
   -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -638,10 +735,13 @@ input[type="checkbox"]:checked + .sidebar .filter .filter-body p::after {
 }
 
 @media (max-width: 900px) {
+  .footer {
+    margin-top: 0;
+  }
   .menu {
     padding: 20px 14px 10px 14px;
   }
-  .menu_line {
+  .menu_line, .more {
     display: none;
   }
   .menu_button {
@@ -708,15 +808,25 @@ input[type="checkbox"]:checked + .sidebar .filter .filter-body p::after {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
-  .products_grid .product_card {
-    width: 1fr;
-  }
 }
 
 @media (max-width: 1024px) {
   .products_grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .products_grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding: 0 14px;
+    gap: 14px;
+  }
+  .products_grid .product_card {
+    width: 100%;
+    min-width: unset;
   }
 }
 /*# sourceMappingURL=category.css.map */

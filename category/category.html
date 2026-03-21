@@ -134,26 +134,53 @@
             <div class="filter">
                 <div class="filter-header article_title">Наявність</div>
                 <div class="filter-body">
-                <label><input type="checkbox"><p class="top_categories_links fx-jc-sb">Є в наявності<span class="amount">4.9 к</span></p></label>
+                    <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="top_categories_links fx-jc-sb">
+                        Є в наявності <p class="amount">4.9 к</p>
+                    </span>
+                    </label>
                 </div>
             </div>
 
             <div class="filter">
                 <div class="filter-header article_title">Ціна</div>
                 <div class="filter-body">
-                <div class="price-inputs">
-                    <input type="text" value="3,0 ₴">
-                    <input type="text" value="25885,2 ₴">
-                </div>
-                <input type="range" min="0" max="30000">
+                    <div class="price-filter">
+                    <div class="price-inputs">
+                        <input type="text" id="minPrice" value="3,0 ₴"> -
+                        <input type="text" id="maxPrice" value="25885,2 ₴">
+                    </div>
+
+                    <div class="range">
+                        <div class="slider">
+                        <div class="track"></div>
+                        <div class="range-fill" id="rangeFill"></div>
+                        </div>
+
+                        <input type="range" id="rangeMin" min="0" max="30000" value="3">
+                        <input type="range" id="rangeMax" min="0" max="30000" value="25885">
+                    </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="filter">
+            <div class="filter active">
                 <div class="filter-header article_title">Безкоштовна доставка</div>
                 <div class="filter-body">
-                <label><input type="checkbox"><p class="top_categories_links fx-jc-sb">Так<span class="amount">4.9 к</span></p></label>
-                <label><input type="checkbox"><p class="top_categories_links fx-jc-sb">Ні<span class="amount">4.9 к</span></p></label>
+                    <label class="checkbox">
+                    <input type="checkbox" checked>
+                    <span class="top_categories_links fx-jc-sb">
+                        Так <p class="amount">4.9 к</p>
+                    </span>
+                    </label>
+
+                    <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="top_categories_links fx-jc-sb">
+                        Ні <p class="amount">4.9 к</p>
+                    </span>
+                    </label>
                 </div>
             </div>
 
@@ -166,18 +193,9 @@
 
             <div class="filter">
                 <div class="filter-header article_title">Тип корму</div>
-                <div class="filter-body">
-                <!-- <label><input type="checkbox"> Влажный корм</label>
-                <label><input type="checkbox"> Заменитель молока</label>
-                <label><input type="checkbox"> Консервы</label>
-                <label><input type="checkbox"> Лакомства</label>
-                <label><input type="checkbox"> Полувлажные лакомства</label>
-                <label><input type="checkbox"> Полувлажный корм</label>
-                <label><input type="checkbox"> Сухой корм</label> -->
-                </div>
+                <div class="filter-body"></div>
             </div>
 
-            <!-- Повторяющиеся секции -->
             <div class="filter">
                 <div class="filter-header article_title">Вага</div>
                 <div class="filter-body"></div>
@@ -241,16 +259,16 @@
             <button class="more top_categories_links">Показати ще</button>
             <div class="bottom_products top_categories_links">
             <div class="pagination">
-                <button class="page active">1</button>
-                <button class="page">2</button>
-                <button class="page">3</button>
-                <button class="page">4</button>
-                <button class="page">5</button>
-                <button class="page">6</button>
-                <button class="page">7</button>
-                <button class="page">8</button>
-                <button class="page">9</button>
-                <button class="page next">→|</button>
+                <button class="page fx-c active">1</button>
+                <button class="page fx-c">2</button>
+                <button class="page fx-c">3</button>
+                <button class="page fx-c">4</button>
+                <button class="page fx-c">5</button>
+                <button class="page fx-c">6</button>
+                <button class="page fx-c">7</button>
+                <button class="page fx-c">8</button>
+                <button class="page fx-c">9</button>
+                <button class="page fx-c next">→|</button>
             </div>
             <div class="pagination-info">
                 Показано з 1 по 12 із 227 (усього 19 сторінок)
