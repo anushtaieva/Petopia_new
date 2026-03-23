@@ -1,4 +1,4 @@
-.font-base, .header_font_white, .top_categories_links, .text_font_footer, .title_font, .item_name_font, .info p, .info ul li, .info ol li, .title_font_footer, .info h3, .price_font, .price-current, .meta_font, .categories_font, .categories_animal_font, .categories_more_font, .article_title, .article_text {
+.font-base, .header_font_white, .top_categories_links, .text_font_footer, .title_font, .item_name_font, .info p, .info ul li, .info ol li, .title_font_footer, .info h3, .price_font, .price-current, .meta_font, .categories_font, .categories_animal_font, .categories_more_font, .authorization_font, .article_title, .article_text {
   font-family: 'Roboto', sans-serif;
   line-height: 100%;
   letter-spacing: 0%;
@@ -66,6 +66,13 @@
   font-size: 16px;
   font-weight: 600;
   color: #333333;
+}
+
+.authorization_font {
+  color: #B1B5B8;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: center;
 }
 
 .categories_more_font {

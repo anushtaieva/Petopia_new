@@ -43,11 +43,6 @@
   font-weight: 500;
 }
 
-.authorization .authorization_form .authorization_form_enter .authorization_font {
-  max-width: 376px;
-  margin-top: 15px;
-}
-
 .authorization .authorization_form .authorization_form_enter .button_authorization {
   width: 100%;
   max-width: 376px;

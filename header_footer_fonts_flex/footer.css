@@ -1,3 +1,7 @@
+.body {
+  min-height: 100vh;
+}
+
 .footer {
   margin: auto;
   background-color: #31435E;

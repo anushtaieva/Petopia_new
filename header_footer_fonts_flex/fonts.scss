@@ -64,7 +64,13 @@
     font-size: 16px;
     font-weight: 600;
     color: #333333;
-
+}
+.authorization_font{
+    @extend .font-base;
+    color: #B1B5B8;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center
 }
 .categories_more_font{
     @extend .categories_animal_font;
