@@ -15,6 +15,12 @@
     font-weight: 400;
     font-size: 14px;
 }
+.menu_font{
+    @extend .font-base;
+    font-size: 10px;
+    font-weight: 400;
+    color: #2A7CF9;
+}
 .title_font, .info h3{
     @extend .font-base;
     font-weight: 600;
@@ -113,4 +119,19 @@
     line-height: 18px;
     color: #333333;
     margin: 20px 0 20px 0;
+}
+.product_description_title{
+    @extend .font-base;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 20px 0 10px 0;
+    color: #333333;
+}
+.product_description_paragraph{
+    @extend .font-base;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 15px 0;
+    color: #333333;
 }

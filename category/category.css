@@ -21,6 +21,14 @@
   margin: 0 5px 0 5px;
 }
 
+.menu .menu_text .last {
+  color: #333333 !important;
+}
+
+.menu .menu_text .last:hover {
+  color: #333333;
+}
+
 .menu .menu_button a {
   text-decoration: none;
   padding: 6px 30px 6px 30px;
