@@ -49,6 +49,9 @@
     padding: 20px 70px 20px 70px;
     margin: auto;
     .product_card{
+        .product_card_description{
+            margin-top: 30px;
+        }
         .product_card_menu {
             ul {
                 display: flex;
@@ -95,7 +98,7 @@
                     width: 112px;
                     height: 112px;
                     object-fit: contain;
-                    border: 2px solid transparent;
+                    border: 1px solid transparent;
                     border-radius: 6px;
                     cursor: pointer;
 
@@ -107,7 +110,7 @@
 
                 &-main {
                 flex: 1;
-                border: 2px solid #4a90ff;
+                border: 1px solid #4a90ff;
                 border-radius: 8px;
                 display: flex;
                 justify-content: center;
@@ -143,13 +146,10 @@
             max-width: 640px;
             border: 1px solid #eee;
             padding: 16px;
-            font-family: Arial, sans-serif;
-            background: #fff;
+            position: relative;
 
-            .title {
-                font-size: 16px;
-                font-weight: 600;
-                margin-bottom: 10px;
+            .product_description_title{
+                margin-top: 4px;
             }
 
             .rating_row {
@@ -157,28 +157,18 @@
                 align-items: center;
                 gap: 10px;
                 font-size: 13px;
+                margin-top: 20px;
                 margin-bottom: 12px;
-
-                .stars {
-                color: #ffc107;
-                }
-
-                .rating_value,
-                .reviews {
-                color: #777;
-                }
             }
 
             .info_row {
-                display: flex;
-                justify-content: space-between;
                 margin-bottom: 15px;
 
                 .info_left {
-                p {
-                    margin: 4px 0;
-                    font-size: 13px;
-                }
+                    margin-top: 0;
+                    p {
+                        margin: 10px 0;
+                    }
                 }
 
                 .brand_logo {
@@ -201,11 +191,16 @@
             .bottom_block {
                 border-top: 1px solid #eee;
                 padding-top: 12px;
+                position: absolute;
+                bottom: 0;
+                width: 90%;
 
                 .price_block {
-                font-size: 13px;
-                color: #777;
+                color: #B1B5B8;
                 margin-bottom: 10px;
+                .saving{
+                    align-items: start !important;
+                }
 
                 .price_row {
                     display: flex;
@@ -230,34 +225,33 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-
                 .qty {
-                    display: flex;
-                    align-items: center;
                     border: 1px solid #ddd;
 
                     button {
-                    width: 28px;
-                    height: 28px;
+                    width: 40px;
+                    height: 40px;
                     border: none;
                     background: #f5f5f5;
                     cursor: pointer;
                     }
 
                     input {
-                    width: 35px;
+                    width: 40px;
                     text-align: center;
                     border: none;
                     }
                 }
 
                 .add_to_cart {
-                    background: #2d6cdf;
+                    background: #2A7CF9;
                     color: #fff;
                     border: none;
                     padding: 8px 16px;
                     cursor: pointer;
-                    border-radius: 3px;
+                    border-radius: 6px;
+                    width: 220px;
+                    height: 40px;
                 }
 
                 .icons {
@@ -278,7 +272,7 @@
 
 // ПРОСМОТРЕННЫЕ ПРОДУКТЫ
 .product_slider{
-    margin-top: 20px;
+    margin-top: 30px;
     .product_slider_carusel{
         display: flex;
         gap: 15px;
