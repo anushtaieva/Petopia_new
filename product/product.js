@@ -1,3 +1,53 @@
+
+//переключение ссылок в верхнем меню карточки товара
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.product_card_menu li');
+
+    // первый активен при загрузке
+    if (items.length) {
+        items[0].classList.add('active');
+    }
+
+    // переключение
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            items.forEach(el => el.classList.remove('active'));
+            item.classList.add('active');
+        });
+    });
+});
+
+//переключатель картинок в карточке товара + точки для адаптива
+document.addEventListener('DOMContentLoaded', () => {
+  const thumbs = document.querySelectorAll('.thumb');
+  const dots = document.querySelectorAll('.dot');
+  const mainImage = document.getElementById('mainImage');
+
+  // массив картинок
+  const images = Array.from(thumbs).map(img => img.src);
+
+  function updateSlider(index) {
+    mainImage.src = images[index];
+
+    thumbs.forEach(t => t.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+
+    if (thumbs[index]) thumbs[index].classList.add('active');
+    if (dots[index]) dots[index].classList.add('active');
+  }
+
+  // клики по превью
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener('click', () => updateSlider(index));
+  });
+
+  // клики по точкам
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => updateSlider(index));
+  });
+});
+
+
 //для горизонтального скролла просмотреных слайдера товаров
 const carousel = document.querySelector('.product_slider_carusel');
 
