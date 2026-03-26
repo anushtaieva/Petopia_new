@@ -1,4 +1,4 @@
-.font-base, .header_font_white, .top_categories_links, .text_font_footer, .menu_font, .title_font, .item_name_font, .info p, .info ul li, .info ol li, .title_font_footer, .info h3, .price_font, .price-current, .meta_font, .categories_font, .categories_animal_font, .categories_more_font, .authorization_font, .article_title, .article_text, .product_description_title, .product_description_paragraph {
+.font-base, .header_font_white, .top_categories_links, .text_font_footer, .menu_font, .dop_actions_font, .title_font, .item_name_font, .info p, .info ul li, .info ol li, .title_font_footer, .info h3, .price_font, .price-current, .meta_font, .categories_font, .categories_animal_font, .categories_more_font, .authorization_font, .saving_font, .article_title, .article_text, .product_description_title, .product_description_paragraph {
   font-family: 'Roboto', sans-serif;
   line-height: 100%;
   letter-spacing: 0%;
@@ -20,6 +20,12 @@
   font-size: 10px;
   font-weight: 400;
   color: #2A7CF9;
+}
+
+.dop_actions_font {
+  font-size: 10px;
+  font-weight: 400;
+  color: #333333;
 }
 
 .title_font, .item_name_font, .info p, .info ul li, .info ol li, .title_font_footer, .info h3 {
@@ -79,6 +85,12 @@
   line-height: 16px;
   font-size: 12px;
   text-align: center;
+}
+
+.saving_font {
+  color: #B1B5B8;
+  line-height: 16px;
+  font-size: 12px;
 }
 
 .categories_more_font {

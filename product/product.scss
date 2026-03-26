@@ -80,10 +80,11 @@
             }
         }
         .product_card_main{
+            // display: flex;
+            // flex-wrap: wrap;
             margin-top: 20px;
             gap: 20px;
             .product_card_main_slider {
-            width: 508px;
             .slider {
                 display: flex;
                 gap: 12px;
@@ -109,18 +110,15 @@
                 }
 
                 &-main {
-                flex: 1;
-                border: 1px solid #4a90ff;
-                border-radius: 8px;
+                flex: 1 1 0%;
+                width: 100%;
+                max-width: 508px;
+                min-width: 0;
+                overflow: hidden;
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
-                img {
-                    max-width: 508px;
-                    height: auto;
-                    object-fit: contain;
-                }
                 }
 
                 &-dots {
@@ -141,15 +139,23 @@
                 }
                 }
             }
+            .slider-main img {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
             }
             .product_card_main_info {
             max-width: 640px;
+            height: 500px;
             border: 1px solid #eee;
             padding: 16px;
             position: relative;
 
             .product_description_title{
                 margin-top: 4px;
+                line-height: 28px;
             }
 
             .rating_row {
@@ -190,16 +196,19 @@
 
             .bottom_block {
                 border-top: 1px solid #eee;
-                padding-top: 12px;
                 position: absolute;
                 bottom: 0;
-                width: 90%;
+                right: 0;
+                width: 100%;
+                padding: 10px 20px 20px 20px;
 
                 .price_block {
                 color: #B1B5B8;
-                margin-bottom: 10px;
+                margin-top: -5px;
                 .saving{
-                    align-items: start !important;
+                    p{
+                        margin-bottom: 7px;
+                    }
                 }
 
                 .price_row {
@@ -209,35 +218,39 @@
                     margin-top: 6px;
 
                     .current_price {
-                    font-size: 26px;
-                    color: #e53935;
+                    font-size: 36px;
+                    color: #CA3636;
                     font-weight: bold;
                     }
 
                     .old_price_line {
                     text-decoration: line-through;
                     color: #aaa;
+                    font-size: 16px;
+                    margin-bottom: 15px;
                     }
                 }
                 }
 
                 .cart_controls {
                 display: flex;
-                align-items: center;
                 gap: 10px;
                 .qty {
-                    border: 1px solid #ddd;
+                    border: 1px solid #E2E2E2;
+                    border-radius: 6px;
+                    font-size: 12.6px;
+                    max-width: 120px;
 
                     button {
                     width: 40px;
                     height: 40px;
                     border: none;
-                    background: #f5f5f5;
+                    background: #E2E2E2;
                     cursor: pointer;
                     }
 
                     input {
-                    width: 40px;
+                    max-width: 40px;
                     text-align: center;
                     border: none;
                     }
@@ -250,18 +263,26 @@
                     padding: 8px 16px;
                     cursor: pointer;
                     border-radius: 6px;
-                    width: 220px;
+                    max-width: 220px;
                     height: 40px;
-                }
-
-                .icons {
-                    span {
-                    margin-left: 8px;
-                    cursor: pointer;
-                    color: #888;
-                    font-size: 18px;
+                    p::before {
+                        content: "";
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url("./images/product_card/buy_icon.png");
+                        background-size: cover;
+                        margin-right: 8px;
                     }
                 }
+                }
+                .dop_actions{
+                    .icons{
+                        gap: 10px;
+                        span{
+                            gap: 5px;
+                        }
+                    }
                 }
             }
             }
@@ -402,7 +423,12 @@
 }
 
 
-
+ @media (max-width: 1360px){
+    // .product_card_main{
+    //     flex-direction: column;
+    //     margin: auto;
+    // }
+ }
 
 
 

@@ -21,6 +21,12 @@
     font-weight: 400;
     color: #2A7CF9;
 }
+.dop_actions_font{
+    @extend .font-base;
+    font-size: 10px;
+    font-weight: 400;
+    color: #333333;
+}
 .title_font, .info h3{
     @extend .font-base;
     font-weight: 600;
@@ -77,6 +83,12 @@
     line-height: 16px;
     font-size: 12px;
     text-align: center
+}
+.saving_font{
+    @extend .font-base;
+    color: #B1B5B8;
+    line-height: 16px;
+    font-size: 12px;
 }
 .categories_more_font{
     @extend .categories_animal_font;
