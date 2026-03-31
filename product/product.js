@@ -1,3 +1,26 @@
+//переключение вкладок
+const tabs = document.querySelectorAll('.tabs li');
+const contents = document.querySelectorAll('.tab');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+
+        const target = tab.dataset.tab;
+
+        // активный таб
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // активный контент
+        contents.forEach(c => {
+            c.classList.remove('active');
+
+            if (c.id === target) {
+                c.classList.add('active');
+            }
+        });
+    });
+});
 
 //переключение ссылок в верхнем меню карточки товара
 document.addEventListener('DOMContentLoaded', () => {

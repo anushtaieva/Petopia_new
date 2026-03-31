@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./product.css">
     <link rel="stylesheet" href="../header_footer_fonts_flex/flex.css">
     <link rel="stylesheet" href="../header_footer_fonts_flex/fonts.css">
     <link rel="stylesheet" href="../header_footer_fonts_flex/header.css">
     <link rel="stylesheet" href="../header_footer_fonts_flex/footer.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./product.css">
     <title>Картка товару</title>
 </head>
 <body>
@@ -59,6 +59,11 @@
         <div class="header_line"></div>
     </div>
 
+    <div class="top_categories_adaptiv fx-ai-c fx-jc-sb">
+        <p class="header_font_white">Каталог товарів</p>
+        <img src="./images/arrow-down.png">
+    </div>
+
     <div class="menu fx-jc-sb fx-ai-c">
         <div class="menu_text fx-jc-sb fx-ai-c">
             <a href="../main/main.html" class="menu_font">Головна</a>
@@ -78,14 +83,36 @@
     <div class="product">
          <div class="product_card">
             <div class="product_card_menu top_categories_links">
-                <ul>
-                    <li class="activ">Все про товар</li>
-                    <li>Характеристики</li>
-                    <li>Зображення</li>
-                    <li>Відгуки (3)</li>
+                <ul class="tabs">
+                    <li class="active" data-tab="main">Все про товар</li>
+                    <li data-tab="characteristics">Характеристики</li>
+                    <li data-tab="images">Зображення</li>
+                    <li data-tab="reviews">Відгуки (3)</li>
                 </ul>
             </div>
+
+        <div class="tabs_content">
+
+            <!-- 1. Основной блок -->
+            <div class="tab active" id="main">
             <div class="product_card_main fx-jc-sb">
+                <h2 class="product_description_title product_description_title_mobile">
+                Беззерновий сухий корм Farmina N&D Cat Pumpkin Duck&Cantaloupe для дорослих котів, з качкою та гарбузом, 1.5 кг
+                </h2>
+
+                <div class="rating_row_adaptiv fx-jc-sb article_text">
+                    <div class="rating_row_adaptiv_model">Модель: <span class="model_number">124891</span></div>
+                    <div class="stars fx-row fx-ai-c">
+                    <img src="./images/product_card/star_filled.png">
+                    <img src="./images/product_card/star_filled.png">
+                    <img src="./images/product_card/star_filled.png">
+                    <img src="./images/product_card/star.png">
+                    <img src="./images/product_card/star.png">
+                    <span class="rating_value authorization_font">3 з 5</span>
+                    <span class="reviews authorization_font">Відгуків: 3</span>
+                    </div>
+                </div>
+
                 <div class="product_card_main_slider">
                     <div class="slider">
                         <!-- Thumbnails (desktop) -->
@@ -153,10 +180,22 @@
                     </div>
 
                     <div class="cart_controls fx-column">
-                        <div class="qty fx-ai-c">
-                            <button>-</button>
-                            <input type="text" value="1">
-                            <button>+</button>
+                        <div class="cart_controls_row1">                        
+                            <div class="qty fx-ai-c">
+                                <button>-</button>
+                                <input type="text" value="1">
+                                <button>+</button>
+                            </div>
+                            <div class="icons icons_adaptiv fx-jc-sb dop_actions_font">
+                                <span class="fx-ai-c fx-column">
+                                    <img src="./images/product_card/swap_icon.png">
+                                    <p>Порівняти</p>
+                                </span>
+                                <span class="fx-ai-c fx-column">
+                                    <img src="./images/product_card/heart_icon.png">
+                                    <p>В вибране</p>
+                                </span>
+                            </div>
                         </div>
 
                         <button class="add_to_cart header_font_white"><p class="fx-c">У кошик</p></button>
@@ -192,7 +231,83 @@
                 <p class="product_description_paragraph">EM Kcal/Kg 4197 - Mj/Kg 17,56</p>
             </div>
          </div>
-         <div class="buy_together"></div>
+        </div>
+
+
+        <!-- 2. Характеристики -->
+        <div class="tab" id="characteristics">
+            <div class="product_characteristics">
+                <div class="characteristics_header">Характеристики</div>
+
+                <table class="characteristics_table">
+                    <tr>
+                        <td>Країна реєстрації бренду</td>
+                        <td>Італія</td>
+                    </tr>
+                    <tr>
+                        <td>Країна-виробник</td>
+                        <td>Сербія</td>
+                    </tr>
+                    <tr>
+                        <td>Інгредієнти</td>
+                        <td>Інгредієнти</td>
+                    </tr>
+                    <tr>
+                        <td>Безкоштовна доставка</td>
+                        <td>Так</td>
+                    </tr>
+                    <tr>
+                        <td>Вік</td>
+                        <td>Для дорослих котів</td>
+                    </tr>
+                    <tr>
+                        <td>Вага</td>
+                        <td>1.5 кг</td>
+                    </tr>
+                    <tr>
+                        <td>Розмір породи</td>
+                        <td>Універсальний</td>
+                    </tr>
+                    <tr>
+                        <td>Тип корму</td>
+                        <td>Сухий корм</td>
+                    </tr>
+                    <tr>
+                        <td>Клас корму</td>
+                        <td>Холістик</td>
+                    </tr>
+                    <tr>
+                        <td>Призначення корму</td>
+                        <td>Стандартний корм</td>
+                    </tr>
+                    <tr>
+                        <td>Тварина</td>
+                        <td>Для котів</td>
+                    </tr>
+                    <tr>
+                        <td>Порода</td>
+                        <td>
+                            Британська короткошерста | Мейн-кун | Перська | Сіамська | 
+                            Сфінкс | Шотландська | Бенгальська
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3. Картинки -->
+        <div class="tab" id="images">
+            <p>Дополнительные изображения</p>
+        </div>
+
+        <!-- 4. Отзывы -->
+        <div class="tab" id="reviews">
+            <p>Отзывы пользователей</p>
+        </div>
+
+
+
+        <div class="buy_together"></div>
         <div class="product_slider">
             <h3 class="title_font">Купують разом</h3>
             <div class="product_slider_carusel fx-jc-sb">
