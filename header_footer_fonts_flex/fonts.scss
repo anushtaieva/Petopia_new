@@ -4,6 +4,9 @@
     letter-spacing: 0%;
     vertical-align: middle;
 }
+.characteristics_header{
+    @extend .font-base;
+}
 .header_font_white{
     @extend .font-base;
     font-weight: 600;

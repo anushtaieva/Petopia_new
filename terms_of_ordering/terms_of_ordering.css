@@ -4,23 +4,18 @@
   max-width: 1440px;
   margin: auto;
 }
-
 .menu p {
   color: #333333 !important;
 }
-
 .menu a {
   text-decoration: none;
 }
-
 .menu .menu_text a:hover {
-  color: #2a7df9ce;
+  color: rgba(42, 125, 249, 0.8078431373);
 }
-
 .menu .menu_text img {
   margin: 0 5px 0 5px;
 }
-
 .menu .menu_button a {
   text-decoration: none;
   padding: 6px 30px 6px 30px;
@@ -28,7 +23,6 @@
   border-radius: 6px;
   background-color: transparent;
 }
-
 .menu .menu_button .header_font_white {
   color: #2A7CF9;
 }
@@ -48,23 +42,18 @@
 .about_text {
   padding: 0 70px;
 }
-
 .about_text ol {
   list-style: decimal;
   list-style-position: outside;
-  padding-left: 1.5em;
-  /* отвечает за выравнивание */
+  padding-left: 1.5em; /* отвечает за выравнивание */
 }
-
 .about_text ul {
   list-style: disc;
   list-style-position: outside;
   padding-left: 1.5em;
 }
-
 .about_text li {
-  display: list-item;
-  /* важно */
+  display: list-item; /* важно */
 }
 
 .about_text_title {
@@ -106,10 +95,8 @@
     display: none;
   }
 }
-
 @media (max-width: 900px) {
   .menu {
     padding-top: 80px;
   }
-}
-/*# sourceMappingURL=terms_of_ordering.css.map */
+}/*# sourceMappingURL=terms_of_ordering.css.map */
