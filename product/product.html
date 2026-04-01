@@ -82,13 +82,16 @@
     
     <div class="product">
          <div class="product_card">
-            <div class="product_card_menu top_categories_links">
+            <div class="product_card_menu top_categories_links fx-jc-sb">
                 <ul class="tabs">
                     <li class="active" data-tab="main">Все про товар</li>
                     <li data-tab="characteristics">Характеристики</li>
                     <li data-tab="images">Зображення</li>
                     <li data-tab="reviews">Відгуки (3)</li>
                 </ul>
+                <div class="leave_review header_font_white">
+                    <button>Залишити відгук</button>
+                </div>
             </div>
 
         <div class="tabs_content">
@@ -295,23 +298,23 @@
                     </table>
                 </div>
                 <div class="product_characteristics_card fx-column fx-jc-sb">
-                    <div class="product_characteristics_card_info fx-c fx-column">
+                    <div class="product_characteristics_card_info fx-ai-c fx-jc-sb fx-column">
                         <h3 class="article_title">Беззерновий сухий корм Farmina N&D Cat Pumpkin Duck&Cantaloupe для дорослих котів, з качкою та гарбузом, 1.5 кг</h3>
                         <img src="./images/product_card/product-124891.png">
                         <div class="price fx-row">
-                            <div class="now_price">233.10 ₴</div>
-                            <div class="old_price">259.00 ₴</div>
+                            <div class="now_price price_font">233.10 ₴</div>
+                            <div class="old_price price-old">259.00 ₴</div>
                         </div>
                     </div>
                     <div class="product_characteristics_card_buy">
                         <div class="cart_controls fx-column">
-                            <div class="cart_controls_row1">                        
+                            <div class="cart_controls_row1 fx-jc-sb">                        
                                 <div class="qty fx-ai-c">
                                     <button>-</button>
                                     <input type="text" value="1">
                                     <button>+</button>
                                 </div>
-                                <div class="icons icons_adaptiv fx-jc-sb dop_actions_font">
+                                <div class="icons fx-jc-sb dop_actions_font">
                                     <span class="fx-ai-c fx-column">
                                         <img src="./images/product_card/swap_icon.png">
                                         <p>Порівняти</p>
@@ -331,13 +334,61 @@
         </div>
 
         <!-- 3. Картинки -->
-        <div class="tab" id="images">
-            <p>Дополнительные изображения</p>
-        </div>
+        <div class="tab" id="images"></div>
 
         <!-- 4. Отзывы -->
         <div class="tab" id="reviews">
-            <p>Отзывы пользователей</p>
+            <div class="reviews_review fx-jc-sb">
+                <div class="reviews_review_user fx-jc-sb fx-row">
+                    <div class="reviews_review_user_image fx-c">ІВ</div>
+                    <div class="reviews_review_user_name">
+                        <p>Ігор Валентинович</p>
+                        <div class="rate"></div>
+                    </div>
+                </div>
+                <div class="reviews_review_content">
+                    <div class="reviews_review_content_date">
+                        <p>22.05.2024</p>
+                    </div>
+                    <div class="reviews_review_content_text">
+                        <p>Корм просто супер! У моего кота чувствительный желудок, и мы долго подбирали подходящий вариант. После перехода на Farmina N&D с уткой и дыней исчезли проблемы с пищеварением, шерсть стала блестящей, а сам кот активнее. Состав натуральный, без зерна — это большой плюс. Рекомендую!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews_review fx-jc-sb">
+                <div class="reviews_review_user fx-jc-sb fx-row">
+                    <div class="reviews_review_user_image fx-c">ІД</div>
+                    <div class="reviews_review_user_name">
+                        <p>Ірина Дмитренко</p>
+                        <div class="rate"></div>
+                    </div>
+                </div>
+                <div class="reviews_review_content">
+                    <div class="reviews_review_content_date">
+                        <p>22.05.2024</p>
+                    </div>
+                    <div class="reviews_review_content_text">
+                        <p>Моей кошке корм понравился, ест с удовольствием. Состав радует — мясо на первом месте, нет лишних наполнителей. Немного дороговато, конечно, но за качество приходится платить. Единственный минус — не во всех магазинах есть в наличии, приходится заказывать заранее.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews_review fx-jc-sb">
+                <div class="reviews_review_user fx-jc-sb fx-row">
+                    <div class="reviews_review_user_image fx-c">КБ</div>
+                    <div class="reviews_review_user_name">
+                        <p>Ксения Барко</p>
+                        <div class="rate"></div>
+                    </div>
+                </div>
+                <div class="reviews_review_content">
+                    <div class="reviews_review_content_date">
+                        <p>22.05.2024</p>
+                    </div>
+                    <div class="reviews_review_content_text">
+                        <p>Очень довольны этим кормом. Котик перестал страдать от аллергии, которая раньше проявлялась на злаковые корма. Сразу видно, что продукт премиум-класса — хороший запах, плотные гранулы, сбалансированный состав. Берём уже третью упаковку, менять не планируем.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -507,6 +558,7 @@
                 </div>
             </div>
         </div>
+    </div>
         <div class="product_slider">
             <h3 class="title_font">Переглянуті товари</h3>
             <div class="product_slider_carusel fx-jc-sb">

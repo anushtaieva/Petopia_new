@@ -1,6 +1,7 @@
 //переключение вкладок
 const tabs = document.querySelectorAll('.tabs li');
 const contents = document.querySelectorAll('.tab');
+const leaveReview = document.querySelector('.leave_review');
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -19,6 +20,13 @@ tabs.forEach(tab => {
                 c.classList.add('active');
             }
         });
+
+        // показать кнопку
+        if (target === 'reviews') {
+            leaveReview.style.display = 'flex';
+        } else {
+            leaveReview.style.display = 'none';
+        }
     });
 });
 

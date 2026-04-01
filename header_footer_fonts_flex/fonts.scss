@@ -49,6 +49,7 @@
     font-size: 20px;
 }
 .price-old{
+    @extend .font-base;
     font-size: 12px;
     text-decoration:line-through;
     color: #ACACAC;
