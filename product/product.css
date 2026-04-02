@@ -568,10 +568,11 @@
 }
 
 .reviews_review {
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 10px 10px;
   border: 1px solid #E4E4E4;
   border-radius: 6px;
+  gap: 80px;
 }
 
 .reviews_review .reviews_review_user {
@@ -584,6 +585,41 @@
   border-radius: 50%;
   background-color: #2A7CF9;
   color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.reviews_review .reviews_review_user .reviews_review_user_name {
+  min-width: 124px;
+}
+
+.reviews_review .reviews_review_user .reviews_review_user_name .rate {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.reviews_review .reviews_review_content {
+  gap: 10px;
+}
+
+.reviews_review .reviews_review_content .reviews_review_content_date p {
+  position: relative;
+  padding-left: 28px;
+}
+
+.reviews_review .reviews_review_content .reviews_review_content_date p::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("./images/product_reviews/calendar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .product_slider {
