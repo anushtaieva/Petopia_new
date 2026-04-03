@@ -84,6 +84,7 @@ const reviewForm = document.getElementById('reviewForm');
 
 reviewBtn.addEventListener('click', () => {
     reviewForm.style.display = 'block';
+    leaveReview.style.display = 'none'; // <-- вот это добавляем
 });
 //звезды в форм для отзывов
 const stars = document.querySelectorAll('.rating .stars img');

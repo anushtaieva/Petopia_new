@@ -25,7 +25,7 @@
         background-image: url('./images/icon-category.png');
       }
 }
-.rating_row_adaptiv, .leave_review, .reviews_review_content_date_adaptiv{
+.rating_row_adaptiv, .leave_review, .reviews_review_content_date_adaptiv, .submit_review_adaptiv{
     display: none;
 }
 .icons_adaptiv{
@@ -545,8 +545,6 @@
 
                     position: absolute;
                     left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
                 }
             }
         }
@@ -577,10 +575,8 @@
     }
 }
 .review_form {
-    margin: 20px 0;
-    border: 1px solid #E2E2E2;
-    padding: 15px;
-    border-radius: 6px;
+    margin: 10px 0 20px 0;
+    position: relative;
 
     &_inner {
         display: flex;
@@ -620,13 +616,15 @@
         }
     }
 
-    .submit_review {
+    .submit_review, .submit_review_adaptiv {
         background: #2A7CF9;
         color: #fff;
         border: none;
         padding: 10px;
         border-radius: 6px;
         cursor: pointer;
+        right: 0;
+        position: absolute;
     }
 }
 
@@ -1047,13 +1045,27 @@
         }
         .reviews_review_content_date_adaptiv{
             display: flex;
-            position: absolute;
-            right: 0;
         }
         .reviews_review_content{
             .reviews_review_content_date{
                 display: none;
             }
         }
+        .rate{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .rating{
+        flex-direction: column;
+        .stars{
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .submit_review_adaptiv{
+        display: flex;
     }
 }

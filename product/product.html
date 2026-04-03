@@ -90,7 +90,7 @@
                     <li data-tab="reviews">Відгуки (3)</li>
                 </ul>
                 <div class="leave_review header_font_white">
-                    <button>Залишити відгук</button>
+                    <button id="leaveReviewBtn">Залишити відгук</button>
                 </div>
             </div>
 
@@ -353,17 +353,19 @@
                     <input type="text" class="top_categories_links">
 
                     <div class="rating fx-row">
-                        <label>Оцініть товар<span>*</span></label>
-                        <div class="stars">
-                            <img src="./images/product_reviews/star_empty.png" data-value="1">
-                            <img src="./images/product_reviews/star_empty.png" data-value="2">
-                            <img src="./images/product_reviews/star_empty.png" data-value="3">
-                            <img src="./images/product_reviews/star_empty.png" data-value="4">
-                            <img src="./images/product_reviews/star_empty.png" data-value="5">
+                        <div class="rating_row fx-row">
+                            <label>Оцініть товар<span>*</span></label>
+                            <div class="stars">
+                                <img src="./images/product_reviews/star_empty.png" data-value="1">
+                                <img src="./images/product_reviews/star_empty.png" data-value="2">
+                                <img src="./images/product_reviews/star_empty.png" data-value="3">
+                                <img src="./images/product_reviews/star_empty.png" data-value="4">
+                                <img src="./images/product_reviews/star_empty.png" data-value="5">
+                            </div>
                         </div>
+                        <button class="submit_review">Залишити відгук</button>
                     </div>
-
-                    <button class="submit_review">Відправити</button>
+                    <!-- <button class="submit_review submit_review_adaptiv">Залишити відгук</button> -->
                 </div>
             </div>
             <div class="reviews_review top_categories_links fx-jc-sb">
@@ -371,7 +373,7 @@
                     <div class="reviews_review_user_image fx-c">ІВ</div>
                     <div class="reviews_review_user_name">
                         <p>Ігор Валентинович</p>
-                        <div class="rate">
+                        <div class="rate fx-row">
                             <img src="./images/product_reviews/star.png">
                             <img src="./images/product_reviews/star.png">
                             <img src="./images/product_reviews/star.png">
@@ -397,7 +399,7 @@
                     <div class="reviews_review_user_image fx-c">ІД</div>
                     <div class="reviews_review_user_name">
                         <p>Ірина Дмитренко</p>
-                        <div class="rate">
+                        <div class="rate fx-row">
                             <img src="./images/product_reviews/star.png">
                             <img src="./images/product_reviews/star.png">
                             <img src="./images/product_reviews/star.png">
@@ -423,7 +425,7 @@
                     <div class="reviews_review_user_image fx-c">КБ</div>
                     <div class="reviews_review_user_name">
                         <p>Ксения Барко</p>
-                        <div class="rate">
+                        <div class="rate fx-row">
                             <img src="./images/product_reviews/star.png">
                             <img src="./images/product_reviews/star.png">
                             <img src="./images/product_reviews/star.png">
