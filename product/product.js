@@ -78,6 +78,58 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//показывать по кнопке "Оставить отзыв" форму для отзывов
+const reviewBtn = document.querySelector('.leave_review button');
+const reviewForm = document.getElementById('reviewForm');
+
+reviewBtn.addEventListener('click', () => {
+    reviewForm.style.display = 'block';
+});
+//звезды в форм для отзывов
+const stars = document.querySelectorAll('.rating .stars img');
+
+stars.forEach(star => {
+    star.addEventListener('click', () => {
+        const value = star.dataset.value;
+
+        stars.forEach(s => {
+            if (s.dataset.value <= value) {
+                s.src = './images/product_reviews/star.png';
+            } else {
+                s.src = './images/product_reviews/star_empty.png';
+            }
+        });
+    });
+});
+stars.forEach(star => {
+    star.addEventListener('mouseover', () => {
+        const value = star.dataset.value;
+
+        stars.forEach(s => {
+            s.src = s.dataset.value <= value
+                ? './images/product_reviews/star.png'
+                : './images/product_reviews/star_empty.png';
+        });
+    });
+
+    star.addEventListener('click', () => {
+        stars.forEach(s => s.dataset.selected = "false");
+        star.dataset.selected = "true";
+    });
+});
+
+document.querySelector('.stars').addEventListener('mouseleave', () => {
+    let selected = [...stars].find(s => s.dataset.selected === "true");
+
+    const value = selected ? selected.dataset.value : 0;
+
+    stars.forEach(s => {
+        s.src = s.dataset.value <= value
+            ? './images/product_reviews/star.png'
+            : './images/product_reviews/star_empty.png';
+    });
+});
+
 
 //для горизонтального скролла просмотреных слайдера товаров
 const carousel = document.querySelector('.product_slider_carusel');
