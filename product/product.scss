@@ -576,17 +576,18 @@
 }
 .review_form {
     margin: 10px 0 20px 0;
-    position: relative;
 
     &_inner {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        span{
+
+        span {
             color: #CA3636;
         }
     }
-    label{
+
+    label {
         font-weight: 600;
         margin-top: 10px;
     }
@@ -603,11 +604,26 @@
         resize: none;
     }
 
+    /* ⭐ БЛОК РЕЙТИНГА */
     .rating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+
+        .rating_row {
+            display: flex;
+            align-items: center;
+            label{
+                margin: 0;
+            }
+        }
+
         .stars {
             display: flex;
             gap: 5px;
             margin-left: 10px;
+
             img {
                 width: 32px;
                 height: 32px;
@@ -616,15 +632,14 @@
         }
     }
 
-    .submit_review, .submit_review_adaptiv {
+    .submit_review {
         background: #2A7CF9;
         color: #fff;
         border: none;
-        padding: 10px;
+        padding: 10px 16px;
         border-radius: 6px;
         cursor: pointer;
-        right: 0;
-        position: absolute;
+        white-space: nowrap;
     }
 }
 
@@ -1058,14 +1073,21 @@
     }
     .rating{
         flex-direction: column;
-        .stars{
-            img{
-                width: 20px;
-                height: 20px;
-            }
-        }
     }
     .submit_review_adaptiv{
         display: flex;
+    }
+    .review_form {
+        margin-bottom: 30px;
+        .rating {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .submit_review {
+            width: 100%;
+            margin-top: 10px;
+        }
     }
 }

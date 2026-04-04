@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../header_footer_fonts_flex/fonts.css">
     <link rel="stylesheet" href="../header_footer_fonts_flex/header.css">
     <link rel="stylesheet" href="../header_footer_fonts_flex/footer.css">
+    <link rel="stylesheet" href="../cart/cart.html">
     <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Головна сторінка</title>
@@ -40,13 +41,13 @@
                     <img src="../header_footer_fonts_flex/images/header/call.png">
                     <a href="#"href="#">Контакти</a>
                 </div>
-                <div class="header_content_menu_info">
+                <div class="header_content_menu_info cart_btn">
                     <img src="../header_footer_fonts_flex/images/header/buy.png">
                     <a href="#"href="#">Кошик</a>
                 </div>
                 <div class="header_content_menu_info">
                     <img src="../header_footer_fonts_flex/images/header/profile.png">
-                    <a href="#"href="#">Кабінет</a>
+                    <a href="../authorization/authorization.html">Кабінет</a>
                 </div>
             </div>
         </div>
@@ -54,7 +55,9 @@
             <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-burger-menu.svg">
             <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-logo.png">
             <input type="text" class="search_input">
-            <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-buy.png">
+            <div class="cart_btn fx-c">
+                <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-buy.png">
+            </div>
         </div>
         <div class="header_line"></div>
     </div>
@@ -631,7 +634,11 @@
             </div>
         </div>
     </div>
-    
-<script src="main_script.js"></script>
+
+
+    <div id="cartContainer"></div>
+    <script src="../cart/cart.js"></script>
+    <script src="main_script.js"></script>
+
 </body>
 </html>

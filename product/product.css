@@ -642,7 +642,7 @@
 
 .review_form {
   margin: 10px 0 20px 0;
-  position: relative;
+  /* ⭐ БЛОК РЕЙТИНГА */
 }
 
 .review_form_inner {
@@ -677,6 +677,32 @@
   resize: none;
 }
 
+.review_form .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+}
+
+.review_form .rating .rating_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review_form .rating .rating_row label {
+  margin: 0;
+}
+
 .review_form .rating .stars {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -691,15 +717,14 @@
   cursor: pointer;
 }
 
-.review_form .submit_review, .review_form .submit_review_adaptiv {
+.review_form .submit_review {
   background: #2A7CF9;
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 10px 16px;
   border-radius: 6px;
   cursor: pointer;
-  right: 0;
-  position: absolute;
+  white-space: nowrap;
 }
 
 .product_slider {
@@ -1204,14 +1229,27 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .rating .stars img {
-    width: 20px;
-    height: 20px;
-  }
   .submit_review_adaptiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .review_form {
+    margin-bottom: 30px;
+  }
+  .review_form .rating {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 10px;
+  }
+  .review_form .submit_review {
+    width: 100%;
+    margin-top: 10px;
   }
 }
 /*# sourceMappingURL=product.css.map */
