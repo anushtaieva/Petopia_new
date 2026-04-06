@@ -1,0 +1,136 @@
+//верхнее меню
+.menu{
+    padding: 106px 70px 20px 70px;
+    max-width: 1440px;
+    margin: auto;
+    p{
+        color: #333333 !important;
+    }
+    a{
+        text-decoration: none;
+    }
+    .menu_text{
+        a:hover{
+            color: #2a7df9ce;
+        }
+        img{
+            margin: 0 5px 0 5px;
+        }
+        .last{
+          color: #333333 !important;
+        }
+        .last:hover{
+          color: #333333;
+        }
+    }
+    .menu_button{
+        a{
+            text-decoration: none;
+            padding: 6px 30px 6px 30px;
+            border: 1px solid #2A7CF9;
+            border-radius: 6px;
+            background-color: transparent;
+        }
+        .header_font_white{
+            color: #2A7CF9;
+        }
+    }
+}
+
+    .menu_line{
+        height: 1px;
+        background-color: #E2E2E2;
+        width: 100%;
+    }
+
+//основной блок
+.content{
+    max-width: 1440px;
+    padding: 20px 70px;
+    margin: auto;
+    .content_blocks{
+        flex-wrap: wrap;
+        gap: 20px;
+        a{
+            text-decoration: none;
+        }
+        .content_block{
+            max-width: 310px;
+            max-height: 130px;
+            border: 1px solid #2A7CF9;
+            border-radius: 6px;
+            padding: 20px;
+            .content_block_img{
+                img{
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+            .content_block_text{
+                margin:0 10px 10px 15px;
+                max-width: 162px;
+                h1{
+                    color: #2A7CF9;
+                    font-size: 16px;
+                    white-space: nowrap;
+                }
+                .article_text{              
+                    text-align: center;
+                    margin: 10px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+//адаптив
+@media (max-width: 768px){
+    .menu{
+        padding: 80px 14px 14px 14px;
+        margin-right: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        img{
+            margin: 0 !important;
+        }
+    }
+    .content{
+        padding: 14px;
+        .title_font{
+            margin-top: 0;
+        }
+        .content_blocks{
+            .content_block{
+                max-width: none;
+                width: 363px;
+                height: 70px;
+                padding: 10px;
+                align-items: center;
+                .content_block_img{
+                    img{
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                .content_block_text{
+                    max-width: none;
+                    width: 282px;
+                    margin: 0;
+                    h1{
+                      text-align: start;  
+                    }
+                    p{
+                        text-align: start;
+                        font-size: 12px;
+                    }
+                    .article_text{
+                        margin: 5px 0 0 0;
+                        text-align: start;
+                    }
+                }
+
+            }
+        }
+    }
+}
