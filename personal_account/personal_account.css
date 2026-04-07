@@ -91,6 +91,12 @@
   margin: 10px 0 0 0;
 }
 
+@media (max-width: 900px) {
+  .menu {
+    padding-top: 86px;
+  }
+}
+
 @media (max-width: 768px) {
   .menu {
     padding: 80px 14px 14px 14px;
