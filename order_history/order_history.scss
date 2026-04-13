@@ -1,0 +1,129 @@
+//верхнее меню
+.menu{
+    padding: 106px 70px 20px 70px;
+    max-width: 1440px;
+    margin: auto;
+    p{
+        color: #333333 !important;
+    }
+    a{
+        text-decoration: none;
+    }
+    .menu_text{
+        a:hover{
+            color: #2a7df9ce;
+        }
+        img{
+            margin: 0 5px 0 5px;
+        }
+        .last{
+          color: #333333 !important;
+        }
+        .last:hover{
+          color: #333333;
+        }
+    }
+    .menu_button{
+        a{
+            text-decoration: none;
+            padding: 6px 30px 6px 30px;
+            border: 1px solid #2A7CF9;
+            border-radius: 6px;
+            background-color: transparent;
+        }
+        .header_font_white{
+            color: #2A7CF9;
+        }
+    }
+}
+
+    .menu_line{
+        height: 1px;
+        background-color: #E2E2E2;
+        width: 100%;
+    }
+
+.content{
+    max-width: 1440px;
+    padding: 20px 70px;
+    margin: auto;
+
+
+    .more{
+        width: 114px;
+        height: 32px;
+        background-color: #2A7CF9;
+        border-radius: 6px;
+        border: none;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .bottom_products {
+    text-align: center;
+    margin-top: 20px;
+
+    .pagination {
+        display: inline-flex;
+        gap: 8px;
+        margin-bottom: 10px;
+        max-width: 490px;
+        max-height: 40px;
+        .page {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #ddd;
+        background: none;
+        border-radius: 8px;
+        color: #2A7CF9;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #e6e6e6;
+        }
+
+        &.active {
+            background: #2f6fed;
+            color: #fff;
+            border-color: #2f6fed;
+        }
+
+        &.next {
+            font-weight: bold;
+        }
+        }
+    }
+
+    .pagination-info {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #888;
+    }
+    }
+}
+
+//адаптив
+@media (max-width: 900px){
+    .menu{
+        padding-top: 86px;
+    }
+}
+@media (max-width: 768px){
+    .menu{
+        padding: 80px 14px 14px 14px;
+        margin-right: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        img{
+            margin: 0 !important;
+        }
+    }
+    .content{
+        padding: 14px;
+
+    }
+}
