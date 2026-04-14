@@ -151,3 +151,24 @@
     margin: 15px 0;
     color: #333333;
 }
+.order_history_title{
+    @extend .font-base;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B1B5B8;
+}
+.order_history_status{
+    @extend .font-base;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+}
+.order_history_status_light{
+    @extend .font-base;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+}

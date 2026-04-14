@@ -1,3 +1,14 @@
+//для разворачивания товара
+  function toggle(id) {
+    const body = document.getElementById('body-' + id);
+    const chev = document.getElementById('chev-' + id);
+    const card = document.getElementById('card-' + id);
+    const isOpen = body.style.display !== 'none';
+    body.style.display = isOpen ? 'none' : 'block';
+    chev.classList.toggle('open', !isOpen);
+    card.classList.toggle('expanded', !isOpen);
+  }
+
 //для пагинации
   const pages = document.querySelectorAll('.bottom_products .page');
 
