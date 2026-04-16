@@ -62,7 +62,13 @@
 
     .order-header {
         display: grid;
-        grid-template-columns: 160px 160px 160px 140px 1fr auto;
+        grid-template-columns: 
+            minmax(100px, 160px)
+            minmax(100px, 160px)
+            minmax(100px, 160px)
+            minmax(100px, 160px)
+            1fr
+            auto;
         align-items: center;
         padding: 10px;
         cursor: pointer;
@@ -100,6 +106,10 @@
         max-width: 50%;
         justify-content: space-between;
         padding: 10px;
+        gap: 20px;
+        .info-block{
+            min-width: 120px;
+        }
     }
 
     .items-table-wrapper {
@@ -108,7 +118,13 @@
 
     .item-row {
         display: grid;
-        grid-template-columns: 56px 1fr 120px 100px 100px 100px;
+        grid-template-columns: 
+            56px 
+            minmax(120px, 1fr) 
+            minmax(80px, 120px) 
+            minmax(70px, 100px) 
+            minmax(70px, 100px) 
+            minmax(70px, 100px);
         align-items: center;
         padding: 10px;
         gap: 12px;
@@ -217,6 +233,107 @@
     }
     .content{
         padding: 14px;
+        .order-card{
+            .col-label{
+                margin: 0;
+            }
+        }
 
     }
+  .order-header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "thumbs    thumbs"
+      "order-num date"
+      "status    sum";
+    padding: 12px 40px 12px 12px; // відступ справа для абсолютного шеврона
+    gap: 10px 16px;
+    align-items: start;
+
+    > div:nth-child(1) { grid-area: order-num; }
+    > div:nth-child(2) { grid-area: date; }
+    > div:nth-child(3) { grid-area: status; }
+    > div:nth-child(4) { grid-area: sum; }
+
+    .thumbs {
+      grid-area: thumbs;
+    }
+
+    .chevron {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      right: 12px;
+      margin-left: 0;
+    }
+  }
+    .order-body {
+        .buyer-info {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+
+            .info-block {
+                min-width: 0;
+            }
+
+            .info-block:nth-child(3) {
+                grid-column: span 2;
+            }
+        }
+        .item-row {
+        grid-template-columns: 
+            minmax(60px, 1fr) 
+            minmax(80px, 1fr) 
+            minmax(80px, 1fr) 
+            minmax(80px, 1fr) 
+            minmax(80px, 1fr) 
+            minmax(80px, 1fr) !important;
+            grid-template-areas:
+                "img name"
+                "model qty"
+                "price sum";
+        }
+
+        /* 1 — картинка */
+        .item-row > .thumb-placeholder {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        /* 2 — название */
+        .item-row > div:nth-child(2) {
+            grid-column: 2/5;
+            grid-row: 1;
+            margin-left: -10px;
+        }
+
+        /* 3 — модель */
+        .item-row > div:nth-child(3) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        /* 4 — количество */
+        .item-row > div:nth-child(4) {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        /* 5 — цена */
+        .item-row > div:nth-child(5) {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        /* 6 — сумма */
+        .item-row > div:nth-child(6) {
+            grid-column: 4;
+            grid-row: 2;
+        }
+    }
+
 }

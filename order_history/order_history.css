@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .menu {
   padding: 106px 70px 20px 70px;
   max-width: 1440px;
@@ -68,8 +69,8 @@
 .content .order-card .order-header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 160px 160px 160px 140px 1fr auto;
-      grid-template-columns: 160px 160px 160px 140px 1fr auto;
+  -ms-grid-columns: minmax(100px, 160px) minmax(100px, 160px) minmax(100px, 160px) minmax(100px, 160px) 1fr auto;
+      grid-template-columns: minmax(100px, 160px) minmax(100px, 160px) minmax(100px, 160px) minmax(100px, 160px) 1fr auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -125,6 +126,11 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px;
+  gap: 20px;
+}
+
+.content .order-card .buyer-info .info-block {
+  min-width: 120px;
 }
 
 .content .order-card .items-table-wrapper {
@@ -134,8 +140,8 @@
 .content .order-card .item-row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 56px 1fr 120px 100px 100px 100px;
-      grid-template-columns: 56px 1fr 120px 100px 100px 100px;
+  -ms-grid-columns: 56px minmax(120px, 1fr) minmax(80px, 120px) minmax(70px, 100px) minmax(70px, 100px) minmax(70px, 100px);
+      grid-template-columns: 56px minmax(120px, 1fr) minmax(80px, 120px) minmax(70px, 100px) minmax(70px, 100px) minmax(70px, 100px);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -249,6 +255,122 @@
   }
   .content {
     padding: 14px;
+  }
+  .content .order-card .col-label {
+    margin: 0;
+  }
+  .order-header {
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "thumbs    thumbs" "order-num date" "status    sum";
+    padding: 12px 40px 12px 12px;
+    gap: 10px 16px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .order-header > div:nth-child(1) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: order-num;
+  }
+  .order-header > div:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: date;
+  }
+  .order-header > div:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: status;
+  }
+  .order-header > div:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: sum;
+  }
+  .order-header .thumbs {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: thumbs;
+  }
+  .order-header .chevron {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    right: 12px;
+    margin-left: 0;
+  }
+  .order-body {
+    /* 1 — картинка */
+    /* 2 — название */
+    /* 3 — модель */
+    /* 4 — количество */
+    /* 5 — цена */
+    /* 6 — сумма */
+  }
+  .order-body .buyer-info {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .order-body .buyer-info .info-block {
+    min-width: 0;
+  }
+  .order-body .buyer-info .info-block:nth-child(3) {
+    grid-column: span 2;
+  }
+  .order-body .item-row {
+    -ms-grid-columns: minmax(60px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) !important;
+        grid-template-columns: minmax(60px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) !important;
+        grid-template-areas: "img name" "model qty" "price sum";
+  }
+  .order-body .item-row > .thumb-placeholder {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .order-body .item-row > div:nth-child(2) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2/5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    margin-left: -10px;
+  }
+  .order-body .item-row > div:nth-child(3) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .order-body .item-row > div:nth-child(4) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .order-body .item-row > div:nth-child(5) {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .order-body .item-row > div:nth-child(6) {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 2;
+    grid-row: 2;
   }
 }
 /*# sourceMappingURL=order_history.css.map */

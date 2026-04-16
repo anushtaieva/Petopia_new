@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+.header{
+    padding: 20px 70px;
+    max-width: 1440px;
+    max-height: 86px;
+    background-color: #2A7CF9;
+    border: 1px solid #2A7CF9;
+        .back_to_buy{
+            p{
+                display: flex;
+                align-items: center;
+            }
+            p::before {
+                content: "";
+                width: 24px;
+                height: 24px;
+                background: url("./images/arrow_left.png") no-repeat center/contain;
+                margin-right: 16px;
+            }
+        }
+}
+
+
+
+
+
+
+
+
+
+.footer{
+    padding: 35px 70px;
+    max-height: 82px;
+    background-color: #31435E;
+    border-top: 8px solid #2A7CF9;
+    p{
+        color: #fff;
+        margin: 0;
+    }
+}
