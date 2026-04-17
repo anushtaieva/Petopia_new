@@ -11,20 +11,187 @@
     <title>Checkout</title>
 </head>
 <body>
-    <div class="header fx-ai-c fx-jc-sb">
-        <div class="logo">
-            <img src="./images/logo.png">
-        </div>
-        <div class="back_to_buy fx-jc-sb ">
-            <p class="header_font_white">Продовжити покупки</p>
+    <div class="header">
+        <div class="header_content fx-ai-c fx-jc-sb">
+            <div class="logo">
+                <img src="./images/logo.png">
+            </div>
+            <div class="back_to_buy fx-jc-sb ">
+                <p class="header_font_white">Продовжити покупки</p>
+            </div>
         </div>
     </div>
-    <div class="content">
-        <div class="payment"></div>
-        <div class="order"></div>
+
+
+
+
+    <div class="content fx-ai-c">
+        <div class="payment">
+            <div class="payment-header">
+            <h2>Деталі оплати</h2>
+            <button class="btn-auth">Авторизуватися</button>
+            </div>
+
+            <div class="section">
+            <div class="section-title">
+                <div class="section-num">1</div>
+                <span>Ваші дані</span>
+            </div>
+            <div class="row row-2">
+                <input type="text" placeholder="Прізвище">
+                <input type="text" placeholder="Ім'я">
+            </div>
+            <div class="row row-2">
+                <input type="text" placeholder="По батькові">
+                <input type="tel" placeholder="Номер телефону">
+            </div>
+            <div class="row row-1">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <a class="not-receiver">Не я отримувач</a>
+            </div>
+
+            <div class="section">
+            <div class="section-title">
+                <div class="section-num">2</div>
+                <span>Доставка</span>
+            </div>
+            <div class="row" style="max-width:260px">
+                <input type="text" placeholder="Місто">
+            </div>
+            </div>
+
+            <div class="section">
+            <div class="section-title">
+                <div class="section-num">3</div>
+                <span>Доставка</span>
+            </div>
+            <div class="payment-methods">
+                <div class="pay-method">
+                <div class="pay-method-icon">💳</div>
+                <div class="pay-method-label">Оплата при доставці</div>
+                </div>
+                <div class="pay-method active">
+                <div class="liqpay-logo">LIQPAY <span>»</span></div>
+                <div class="pay-method-label">Оплата онлайн</div>
+                </div>
+            </div>
+            <div class="comment-area">
+                <textarea placeholder="Залишити коментар"></textarea>
+            </div>
+            </div>
+        </div>
+        <div class="order">
+            <h2>Ваше замовлення</h2>
+
+            <div class="order-items">
+            <div class="order-item">
+                <div class="order-item-img"><img src="https://via.placeholder.com/64x64/e8f5e9/388e3c?text=N%26D" alt=""></div>
+                <div class="order-item-body">
+                <div class="order-item-name">Беззерновий сухий корм Farmina N&amp;D, для дорослих котів, курка з гранатом, 1,5 кг</div>
+                <div class="order-item-prices">
+                    <span class="order-item-price-old">963.60 ₴</span>
+                    <span class="order-item-price-new">819.60 ₴</span>
+                </div>
+                <div class="order-item-meta">
+                    <span class="order-item-model">Модель: 156412</span>
+                    <span class="order-item-qty-label">Кількість:</span>
+                    <div class="qty-control">
+                    <button class="qty-btn">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty-btn">+</button>
+                    </div>
+                    <span class="order-item-delete">🗑</span>
+                </div>
+                </div>
+            </div>
+
+            <div class="order-item">
+                <div class="order-item-img"><img src="https://via.placeholder.com/64x64/fce4ec/e91e63?text=Ball" alt=""></div>
+                <div class="order-item-body">
+                <div class="order-item-name">Іграшка AnimAll Fun тренувальний м'яч для собак, 7 см, фіолетова</div>
+                <div class="order-item-prices">
+                    <span class="order-item-price-old">96.60 ₴</span>
+                    <span class="order-item-price-new">87.00 ₴</span>
+                </div>
+                <div class="order-item-meta">
+                    <span class="order-item-model">Модель: 130206</span>
+                    <span class="order-item-qty-label">Кількість:</span>
+                    <div class="qty-control">
+                    <button class="qty-btn">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty-btn">+</button>
+                    </div>
+                    <span class="order-item-delete">🗑</span>
+                </div>
+                </div>
+            </div>
+
+            <div class="order-item">
+                <div class="order-item-img"><img src="https://via.placeholder.com/64x64/e3f2fd/1565c0?text=FL" alt=""></div>
+                <div class="order-item-body">
+                <div class="order-item-name">Краплі Boehringer Ingelheim Фронтлайн Комбо Спот Он від бліх і кліщів для собак, 40-60 кг</div>
+                <div class="order-item-prices">
+                    <span class="order-item-price-old">193.20 ₴</span>
+                    <span class="order-item-price-new">174.00 ₴</span>
+                </div>
+                <div class="order-item-meta">
+                    <span class="order-item-model">Модель: 156412</span>
+                    <span class="order-item-qty-label">Кількість:</span>
+                    <div class="qty-control">
+                    <button class="qty-btn">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty-btn">+</button>
+                    </div>
+                    <span class="order-item-delete">🗑</span>
+                </div>
+                </div>
+            </div>
+
+            <div class="order-item">
+                <div class="order-item-img"><img src="https://via.placeholder.com/64x64/e8f5e9/388e3c?text=N%26D" alt=""></div>
+                <div class="order-item-body">
+                <div class="order-item-name">Беззерновий сухий корм Farmina N&amp;D, для дорослих котів</div>
+                <div class="order-item-prices">
+                    <span class="order-item-price-old">963.60 ₴</span>
+                    <span class="order-item-price-new">819.60 ₴</span>
+                </div>
+                <div class="order-item-meta">
+                    <span class="order-item-model">Модель: 156412</span>
+                    <span class="order-item-qty-label">Кількість:</span>
+                    <div class="qty-control">
+                    <button class="qty-btn">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty-btn">+</button>
+                    </div>
+                    <span class="order-item-delete">🗑</span>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <button class="btn-promo">Використати промокод</button>
+
+            <div class="order-totals">
+            <div class="order-total-row"><span>Сума знижок:</span><span>140.00 ₴</span></div>
+            <div class="order-total-row"><span>Сума до знижок:</span><span>940.60 ₴</span></div>
+            </div>
+
+            <div class="order-footer">
+            <button class="btn-order">Оформити замовлення</button>
+            <p class="order-agreement">Я приймаю <a href="#">Договір публічної оферти</a> та погоджуюсь на обробку персональних даних, відповідно до <a href="#">Політики конфіденційності</a></p>
+        </div>
     </div>
+    </div>
+
+
+
+
+
     <div class="footer">
-        <p class="categories_font">Гаряча лінія: +38 (067) 620-16-37</p>
+        <div class="footer_content">
+            <p class="categories_font">Гаряча лінія: +38 (067) 620-16-37</p>
+        </div>
     </div>
 </body>
 </html>
