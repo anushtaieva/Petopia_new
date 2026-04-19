@@ -254,6 +254,7 @@ input[type='tel']:focus {
   overflow-y: auto;
   margin-bottom: 16px;
   padding-right: 4px;
+  border-bottom: 1px solid #E2E2E2;
 }
 
 .order-items::-webkit-scrollbar {
@@ -261,12 +262,12 @@ input[type='tel']:focus {
 }
 
 .order-items::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #E6E6E6;
   border-radius: 2px;
 }
 
 .order-items::-webkit-scrollbar-thumb {
-  background: #d1d5db;
+  background: #ACACAC;
   border-radius: 2px;
 }
 
@@ -275,12 +276,8 @@ input[type='tel']:focus {
   display: -ms-flexbox;
   display: flex;
   gap: 12px;
-  padding: 14px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.order-item:last-child {
-  border-bottom: none;
+  padding: 0 5px 10px 0;
+  position: relative;
 }
 
 .order-item-img {
@@ -337,19 +334,6 @@ input[type='tel']:focus {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  line-height: 1.2;
-}
-
-.order-item-price-old {
-  font-size: 12px;
-  color: #ef4444;
-  text-decoration: line-through;
-}
-
-.order-item-price-new {
-  font-size: 18px;
-  font-weight: 700;
-  color: #1a1a1a;
 }
 
 .order-item-meta {
@@ -360,39 +344,44 @@ input[type='tel']:focus {
   grid-row: 2;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto 1fr auto;
-      grid-template-columns: auto auto auto 1fr auto;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.order-item-model {
-  font-size: 12px;
-  color: #9ca3af;
+.order-item-meta-count {
+  gap: 10px;
 }
 
-.order-item-qty-label {
-  font-size: 12px;
-  color: #9ca3af;
+.order-item .qty-btn {
+  border: none;
+  background-color: #F9FAFA;
+  color: #ACACAC;
+}
+
+.order-item .qty-val {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  color: #ACACAC;
+  border: 1px solid #ACACAC;
+  background-color: #F9FAFA;
 }
 
 .order-item-delete {
-  -ms-grid-column-align: end;
-      justify-self: end;
+  position: absolute;
+  right: 5px;
   cursor: pointer;
-  color: #d1d5db;
-  font-size: 18px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.order-item-delete:hover {
-  color: #ef4444;
 }
 
 .order-totals {
+  border-top: 1px solid #E2E2E2;
+  padding-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -403,13 +392,8 @@ input[type='tel']:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 14px;
-  color: #1a1a1a;
   margin-bottom: 6px;
-}
-
-.order-total-row span:last-child {
-  font-weight: 600;
+  gap: 5px;
 }
 
 .order-footer {
@@ -423,79 +407,32 @@ input[type='tel']:focus {
 }
 
 .order-agreement {
-  font-size: 11px;
-  color: #9ca3af;
-  line-height: 1.5;
+  line-height: 18px;
 }
 
 .order-agreement a {
-  color: #2563eb;
+  color: #D24747;
   text-decoration: underline;
-}
-
-.qty-control {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 6px;
-}
-
-.qty-btn {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #d1d5db;
-  border-radius: 4px;
-  background: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #4b5563;
-  line-height: 1;
-}
-
-.qty-val {
-  font-size: 13px;
-  font-weight: 500;
-  min-width: 14px;
-  text-align: center;
-  color: #1a1a1a;
 }
 
 .btn-promo {
   background: #fff;
-  border: 1px solid #1a1a1a;
+  border: 1px solid #ACACAC;
   border-radius: 6px;
-  padding: 9px 18px;
-  font-size: 14px;
-  font-weight: 500;
+  padding: 10px 20px;
   cursor: pointer;
-  color: #1a1a1a;
   margin-bottom: 16px;
 }
 
 .btn-order {
-  background: #2563eb;
+  background: #2A7CF9;
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 11px 20px;
-  font-size: 14px;
-  font-weight: 500;
+  padding: 12px 14px;
+  font-weight: 400;
   cursor: pointer;
   white-space: nowrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 
 .footer {
