@@ -2,7 +2,8 @@
 *, html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header {
@@ -12,15 +13,18 @@
   top: 0;
   background-color: white;
 }
+
 .header .header_content_adaptiv {
   display: none;
 }
+
 .header .header_content {
   max-width: 1440px;
   margin: auto;
   height: 80px;
   padding: 10px 70px 0 70px;
 }
+
 .header .header_content .header_content_catalog {
   padding: 4px 20px 4px 20px;
   width: 127px;
@@ -29,15 +33,18 @@
   border: 1px solid #2A7CF9;
   border-radius: 6px;
 }
+
 .header .header_content .header_content_catalog img {
   width: 24px;
   height: 24px;
   margin-right: 5px;
 }
+
 .header .header_content .header_content_catalog:hover {
   background: #1d4ed8;
 }
-.header .header_content .header_content_search input[type=text] {
+
+.header .header_content .header_content_search input[type="text"] {
   width: 467px;
   height: 44px;
   border: 1px solid #2A7CF9;
@@ -47,6 +54,7 @@
   color: #ACACAC;
   font-weight: 400;
 }
+
 .header .header_content .header_content_search button {
   width: 122px;
   height: 44px;
@@ -57,29 +65,42 @@
   padding: 15px;
   margin-left: -10px;
 }
+
 .header .header_content .header_content_search button img {
   margin-left: 10px;
 }
+
 .header .header_content .header_content_menu .header_content_menu_info {
   margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .header .header_content .header_content_menu .header_content_menu_info img {
   width: 20px;
   height: auto;
   margin-bottom: 3px;
 }
+
 .header .header_content .header_content_menu .header_content_menu_info a {
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 10px;
   vertical-align: middle;
   color: #333333;
 }
+
 .header .header_line {
   background-color: #2A7CF9;
   width: 100%;
@@ -90,20 +111,27 @@
 .header_content_adaptiv {
   padding: 15px;
 }
+
 .header_content_adaptiv img {
   margin: 0 10px 0 10px;
 }
-.header_content_adaptiv input[type=text] {
-  flex: 1;
+
+.header_content_adaptiv input[type="text"] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin: 0 10px 0 10px;
   height: 30px;
   border: 1px solid #2A7CF9;
   border-radius: 6px;
-  padding-left: 30px; /* отступ чтобы текст не налезал на иконку */
+  padding-left: 30px;
+  /* отступ чтобы текст не налезал на иконку */
   background-image: url("./images/header/search-grey.png");
   background-repeat: no-repeat;
-  background-position: 5px center; /* позиция иконки */
-  background-size: 20px 20px; /* размер иконки */
+  background-position: 5px center;
+  /* позиция иконки */
+  background-size: 20px 20px;
+  /* размер иконки */
   z-index: 10;
 }
 
@@ -112,8 +140,9 @@
     padding: 0 20px 0 20px !important;
   }
 }
+
 @media (max-width: 1220px) {
-  .header .header_content .header_content_search input[type=text] {
+  .header .header_content .header_content_search input[type="text"] {
     width: auto;
   }
   .header .header_content .header_content_search button {
@@ -125,11 +154,12 @@
     padding: 10px;
   }
 }
+
 @media (max-width: 900px) {
   .header .header_content {
     display: none;
   }
-  .header .header_content .header_content_search input[type=text] {
+  .header .header_content .header_content_search input[type="text"] {
     width: auto;
   }
   .header .header_content .header_content_search button {
@@ -137,6 +167,9 @@
     padding: 10px;
   }
   .header .header_content_adaptiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
-}/*# sourceMappingURL=header.css.map */
+}
+/*# sourceMappingURL=header.css.map */

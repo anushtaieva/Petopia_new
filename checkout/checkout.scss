@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 .header{
     padding: 20px 70px;
     max-height: 86px;
@@ -28,23 +29,17 @@ html, body {
 
 
 .content {
-    max-width: 1440px;
-    margin: auto;
-
+  align-items: stretch;
   .payment {
+    flex: 1;
     padding: 40px 70px;
-    width: 50%;
 
     &-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       margin-bottom: 24px;
-
-      h2 {
-        font-size: 18px;
-        font-weight: 600;
-        color: #1a1a1a;
+      border-bottom: 1px solid #E2E2E2;
+      padding-bottom: 20px;
+      .title_font{
+        margin: 0
       }
     }
 
@@ -58,14 +53,12 @@ html, body {
 }
 
 .btn-auth {
-  background: #2563eb;
-  color: #fff;
+  background: #2A7CF9;
   border: none;
   border-radius: 6px;
-  padding: 8px 18px;
-  font-size: 14px;
-  font-weight: 500;
+  padding: 8px 40px;
   cursor: pointer;
+  font-weight: 400;
 }
 
 .section {
@@ -78,24 +71,19 @@ html, body {
     margin-bottom: 14px;
 
     span {
-      font-size: 16px;
-      font-weight: 600;
-      color: #1a1a1a;
+      font-size: 20px;
     }
   }
 
   &-num {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #2563eb;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: #2A7CF9;
+    border: 1px solid #2A7CF9;
     color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 400;
   }
 }
 
@@ -110,13 +98,12 @@ html, body {
 
 input[type='text'],
 input[type='email'],
-input[type='tel'] {
-  width: 100%;
+input[type='tel']{
   padding: 10px 12px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-size: 14px;
-  color: #1a1a1a;
+  color: #B1B5B8;
   outline: none;
 
   &::placeholder { color: #9ca3af; }
@@ -124,17 +111,16 @@ input[type='tel'] {
 }
 
 .not-receiver {
-  color: #2563eb;
-  font-size: 13px;
+  color: #2A7CF9;
   cursor: pointer;
-  margin-top: 4px;
+  margin-top: 10px;
   display: inline-block;
 }
 
 .pay-method {
   border: 1px solid #d1d5db;
   border-radius: 8px;
-  padding: 14px 10px;
+  padding: 16px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,31 +135,20 @@ input[type='tel'] {
   }
 }
 
-.liqpay-logo {
-  font-size: 20px;
-  font-weight: 700;
-  color: #2563eb;
-  letter-spacing: -0.5px;
-
-  span { color: #f97316; }
-}
 
 .comment-area {
   margin-top: 14px;
 
   textarea {
     width: 100%;
-    padding: 10px 12px;
+    padding: 12px 12px;
     border: 1px solid #d1d5db;
     border-radius: 6px;
-    font-size: 14px;
     resize: none;
-    height: 72px;
-    font-family: inherit;
-    outline: none;
-
+    height: 68px;
     &::placeholder { color: #9ca3af; }
     &:focus { border-color: #2563eb; }
+    box-sizing: border-box;
   }
 }
 
@@ -181,18 +156,18 @@ input[type='tel'] {
 
 
 .order {
-    background-color: #D9D9D9;
-    width: 50%;
+    background-color: #F9FAFA;
+    border-left: 1px solid #D9D9D9;
+    flex: 1;
     padding: 40px 70px;
-    width: 100%;
-    min-height: 100vh;
-
-  h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 16px;
-  }
+    .title_font{
+      margin: 0;
+    }
+    &-header{
+      border-bottom: 1px solid #E2E2E2;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
 
   &-items {
     max-height: 360px;
@@ -214,31 +189,38 @@ input[type='tel'] {
     &:last-child { border-bottom: none; }
 
     &-img {
-      width: 64px;
-      height: 64px;
-      border-radius: 6px;
-      border: 1px solid #e5e7eb;
-      flex-shrink: 0;
-      background: #fafafa;
-      overflow: hidden;
+      width: 90px;
+      height: 90px;
+      border-radius: 7px;
 
       img { width: 100%; height: 100%; object-fit: contain; }
     }
 
-    &-body { flex: 1; min-width: 0; }
+    &-body {
+      flex: 1;
+      min-width: 0;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      column-gap: 16px;
+      row-gap: 8px;
+    }
 
     &-name {
-      font-size: 13px;
-      color: #1a1a1a;
-      line-height: 1.4;
-      margin-bottom: 6px;
+      grid-column: 1 / 2;
+      grid-row: 1;
+      max-width: 348px;
     }
 
     &-prices {
+      grid-column: 2 / 3;
+      grid-row: 1;
+
       display: flex;
-      align-items: baseline;
-      gap: 6px;
-      margin-bottom: 8px;
+      flex-direction: column;
+      align-items: flex-end;
+      line-height: 1.2;
     }
 
     &-price-old {
@@ -248,28 +230,41 @@ input[type='tel'] {
     }
 
     &-price-new {
-      font-size: 15px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
       color: #1a1a1a;
     }
 
     &-meta {
-      display: flex;
+      grid-column: 1 / 3;
+      grid-row: 2;
+
+      display: grid;
+      grid-template-columns: auto auto auto 1fr auto;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
-    &-model { font-size: 11px; color: #9ca3af; }
+    &-model {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    &-qty-label {
+      font-size: 12px;
+      color: #9ca3af;
+    }
 
     &-delete {
-      margin-left: auto;
+      justify-self: end;
       cursor: pointer;
       color: #d1d5db;
-      font-size: 16px;
-      align-self: flex-end;
+      font-size: 18px;
       flex-shrink: 0;
 
-      &:hover { color: #ef4444; }
+      &:hover {
+        color: #ef4444;
+      }
     }
   }
 

@@ -27,68 +27,70 @@
 
     <div class="content fx-ai-c">
         <div class="payment">
-            <div class="payment-header">
-            <h2>Деталі оплати</h2>
-            <button class="btn-auth">Авторизуватися</button>
+            <div class="payment-header fx-jc-sb fx-ai-c">
+            <p class="title_font">Деталі оплати</p>
+            <button class="btn-auth header_font_white">Авторизуватися</button>
             </div>
 
             <div class="section">
             <div class="section-title">
-                <div class="section-num">1</div>
-                <span>Ваші дані</span>
+                <div class="section-num fx-c order_history_status">1</div>
+                <span class="order_history_status">Ваші дані</span>
             </div>
-            <div class="row row-2">
+            <div class="row row-2 top_categories_links">
                 <input type="text" placeholder="Прізвище">
                 <input type="text" placeholder="Ім'я">
             </div>
-            <div class="row row-2">
+            <div class="row row-2 top_categories_links">
                 <input type="text" placeholder="По батькові">
                 <input type="tel" placeholder="Номер телефону">
             </div>
-            <div class="row row-1">
+            <div class="row row-1 top_categories_links">
                 <input type="email" placeholder="E-mail">
             </div>
-            <a class="not-receiver">Не я отримувач</a>
+            <a class="not-receiver top_categories_links">Не я отримувач</a>
             </div>
 
             <div class="section">
             <div class="section-title">
-                <div class="section-num">2</div>
-                <span>Доставка</span>
+                <div class="section-num  fx-c order_history_status">2</div>
+                <span class="order_history_status">Доставка</span>
             </div>
-            <div class="row" style="max-width:260px">
+            <div class="row top_categories_links" style="max-width:260px">
                 <input type="text" placeholder="Місто">
             </div>
             </div>
 
             <div class="section">
             <div class="section-title">
-                <div class="section-num">3</div>
-                <span>Доставка</span>
+                <div class="section-num  fx-c order_history_status">3</div>
+                <span class="order_history_status">Метод оплати</span>
             </div>
             <div class="payment-methods">
-                <div class="pay-method">
-                <div class="pay-method-icon">💳</div>
-                <div class="pay-method-label">Оплата при доставці</div>
+                <div class="pay-method fx-jc-sb fx-ai-c">
+                <div class="pay-method-icon"><img src="./images/logo_pay.png"></div>
+                <div class="pay-method-label top_categories_links">Оплата при доставці</div>
                 </div>
-                <div class="pay-method active">
-                <div class="liqpay-logo">LIQPAY <span>»</span></div>
-                <div class="pay-method-label">Оплата онлайн</div>
+                <div class="pay-method fx-jc-sb fx-ai-c active">
+                <div class="liqpay-logo"><img src="./images/logo_liqpay.png"></div>
+                <div class="pay-method-label top_categories_links">Оплата онлайн</div>
                 </div>
             </div>
             <div class="comment-area">
-                <textarea placeholder="Залишити коментар"></textarea>
+                <textarea class="top_categories_links" placeholder="Залишити коментар"></textarea>
             </div>
             </div>
         </div>
         <div class="order">
-            <h2>Ваше замовлення</h2>
+            <div class="order-header">
+                <h2 class="title_font">Ваше замовлення</h2>
+            </div>
 
             <div class="order-items">
             <div class="order-item">
-                <div class="order-item-img"><img src="https://via.placeholder.com/64x64/e8f5e9/388e3c?text=N%26D" alt=""></div>
+                <div class="order-item-img"><img src="./images/product_image-1.png" alt=""></div>
                 <div class="order-item-body">
-                <div class="order-item-name">Беззерновий сухий корм Farmina N&amp;D, для дорослих котів, курка з гранатом, 1,5 кг</div>
+                <div class="order-item-name checkout_order_title">Беззерновий сухий корм Farmina N&amp;D, для дорослих котів, курка з гранатом, 1,5 кг</div>
                 <div class="order-item-prices">
                     <span class="order-item-price-old">963.60 ₴</span>
                     <span class="order-item-price-new">819.60 ₴</span>
@@ -107,9 +109,9 @@
             </div>
 
             <div class="order-item">
-                <div class="order-item-img"><img src="https://via.placeholder.com/64x64/fce4ec/e91e63?text=Ball" alt=""></div>
+                <div class="order-item-img"><img src="./images/product_image-2.png" alt=""></div>
                 <div class="order-item-body">
-                <div class="order-item-name">Іграшка AnimAll Fun тренувальний м'яч для собак, 7 см, фіолетова</div>
+                <div class="order-item-name checkout_order_title">Іграшка AnimAll Fun тренувальний м'яч для собак, 7 см, фіолетова</div>
                 <div class="order-item-prices">
                     <span class="order-item-price-old">96.60 ₴</span>
                     <span class="order-item-price-new">87.00 ₴</span>
@@ -128,9 +130,9 @@
             </div>
 
             <div class="order-item">
-                <div class="order-item-img"><img src="https://via.placeholder.com/64x64/e3f2fd/1565c0?text=FL" alt=""></div>
+                <div class="order-item-img"><img src="./images/product_image-3.png" alt=""></div>
                 <div class="order-item-body">
-                <div class="order-item-name">Краплі Boehringer Ingelheim Фронтлайн Комбо Спот Он від бліх і кліщів для собак, 40-60 кг</div>
+                <div class="order-item-name checkout_order_title">Краплі Boehringer Ingelheim Фронтлайн Комбо Спот Он від бліх і кліщів для собак, 40-60 кг</div>
                 <div class="order-item-prices">
                     <span class="order-item-price-old">193.20 ₴</span>
                     <span class="order-item-price-new">174.00 ₴</span>
@@ -149,9 +151,9 @@
             </div>
 
             <div class="order-item">
-                <div class="order-item-img"><img src="https://via.placeholder.com/64x64/e8f5e9/388e3c?text=N%26D" alt=""></div>
+                <div class="order-item-img"><img src="./images/product_image-1.png" alt=""></div>
                 <div class="order-item-body">
-                <div class="order-item-name">Беззерновий сухий корм Farmina N&amp;D, для дорослих котів</div>
+                <div class="order-item-name checkout_order_title">Беззерновий сухий корм Farmina N&amp;D, для дорослих котів</div>
                 <div class="order-item-prices">
                     <span class="order-item-price-old">963.60 ₴</span>
                     <span class="order-item-price-new">819.60 ₴</span>
