@@ -4,8 +4,7 @@ html, body {
 }
 
 .header{
-    padding: 20px 70px;
-    max-height: 86px;
+    padding: 15px 70px;
     background-color: #2A7CF9;
     border: 1px solid #2A7CF9;
     .header_content{
@@ -25,6 +24,10 @@ html, body {
             }
         }
     }
+}
+
+.order-footer_adaptiv, .button_cart_adaptiv{
+  display: none;
 }
 
 
@@ -48,6 +51,19 @@ html, body {
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       margin-top: 14px;
+    }
+    .button_cart_adaptiv{
+      margin: auto;
+      color: #333333;
+      border: 1px solid #333333;
+      background-color: #FFFFFF;
+      border-radius: 6px;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+      max-height: 40px;
+      .montserrat-button{
+        margin: 0;
+      }
     }
   }
 }
@@ -304,11 +320,6 @@ input[type='tel']{
 }
 
 
-
-
-
-
-
 .footer{
     padding: 35px 70px;
     max-height: 82px;
@@ -323,4 +334,87 @@ input[type='tel']{
             margin: 0;
         }
     }
+}
+
+
+
+
+@media (max-width: 1100px) {
+  .order-footer_adaptiv, .button_cart_adaptiv{
+    display: flex;
+  }
+  .content{
+    .order{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header{
+    padding: 7px 14px;
+    max-height: 65px;
+    .header_content{
+      .logo{
+        img{
+          width: 110px;
+          height: 32px;
+        }
+      }
+        .back_to_buy{
+          p{
+            font-size: 12px
+          }
+            p::before {
+                margin-right: 6px;
+            }
+        }
+    }
+  }
+  .content{
+    .payment{
+      padding: 11px 14px;
+      .montserrat-button{
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .payment-header{
+        flex-direction: column;
+        margin: 0;
+        border: none;
+        .title_font{
+          border-bottom: 1px solid #E2E2E2;
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+          width: 100%;
+        }
+        .btn-auth{
+          width: 100%;
+          padding: 11px;
+        }
+      }
+      .row{
+        grid-template-columns: 1fr;
+        max-width: 100% !important;
+      }
+      .section{
+        .payment-methods{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    .order-footer{
+      flex-direction: column-reverse;
+      font-size: 10px !important;
+      .btn-order{
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .footer{
+    padding: 20px
+  }
 }

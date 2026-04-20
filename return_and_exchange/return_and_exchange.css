@@ -3,23 +3,18 @@
   max-width: 1440px;
   margin: auto;
 }
-
 .menu p {
   color: #333333 !important;
 }
-
 .menu a {
   text-decoration: none;
 }
-
 .menu .menu_text a:hover {
-  color: #2a7df9ce;
+  color: rgba(42, 125, 249, 0.8078431373);
 }
-
 .menu .menu_text img {
   margin: 0 5px 0 5px;
 }
-
 .menu .menu_button a {
   text-decoration: none;
   padding: 6px 30px 6px 30px;
@@ -27,7 +22,6 @@
   border-radius: 6px;
   background-color: transparent;
 }
-
 .menu .menu_button .header_font_white {
   color: #2A7CF9;
 }
@@ -47,7 +41,6 @@
 .about_text {
   padding: 0 70px;
 }
-
 .about_text ul {
   margin: 0 0 0 20px;
 }
@@ -91,10 +84,8 @@
     display: none;
   }
 }
-
 @media (max-width: 900px) {
   .menu {
     padding-top: 80px;
   }
-}
-/*# sourceMappingURL=return_and_exchange.css.map */
+}/*# sourceMappingURL=return_and_exchange.css.map */

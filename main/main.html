@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../header_footer_fonts_flex/fonts.css">
     <link rel="stylesheet" href="../header_footer_fonts_flex/header.css">
     <link rel="stylesheet" href="../header_footer_fonts_flex/footer.css">
-    <link rel="stylesheet" href="../cart/cart.html">
     <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Головна сторінка</title>
@@ -52,7 +51,7 @@
             </div>
         </div>
         <div class="header_content_adaptiv fx-jc-sb">
-            <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-burger-menu.svg">
+            <img class="menu-toggle" src="../header_footer_fonts_flex/images/adaptiv_footer/icon-burger-menu.svg">
             <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-logo.png">
             <input type="text" class="search_input">
             <div class="cart_btn fx-c">
@@ -60,6 +59,39 @@
             </div>
         </div>
         <div class="header_line"></div>
+
+
+        <nav class="sidebar fx-column">
+
+            <div class="sidebar-header fx-jc-sb fx-ai-c">
+                <img src="../header_footer_fonts_flex/images/sidebar/icon_close.png">
+                <img src="../header_footer_fonts_flex/images/sidebar/icon_logo.png">
+                <div class="language fx-jc-sb fx-ai-c">
+                    <p class="montserrat">UA</p>
+                    <img src="../header_footer_fonts_flex/images/sidebar/arrow_down.png">
+                </div>
+            </div>
+            <div class="sidebar-catalog">
+            <div class="top_categories_adaptiv fx-ai-c fx-jc-sb">
+                <p class="header_font_white">Каталог товарів</p>
+                <img src="./images/main_top/arrow-down.png">
+            </div>
+            </div>
+            <div class="sidebar-user side_menu">
+                <p>Александр Александрович Александров</p>
+            </div>
+            <div class="sidebar-user_data">
+                <p class="cart">Кошик</p>
+                <p class="favorites">Вибране</p>
+                <p class="info">Інформація</p>
+            </div>
+            <div class="sidebar-contacts"></div>
+            <div class="sidebar-info"></div>
+            <div class="sidebar-dop"></div>
+        </nav>
+        <div class="overlay"></div>
+
+
     </div>
 
 
@@ -638,6 +670,7 @@
 
     <div id="cartContainer"></div>
     <script src="../cart/cart.js"></script>
+    <script src="../header_footer_fonts_flex/sidebar.js"></script>
     <script src="main_script.js"></script>
 
 </body>

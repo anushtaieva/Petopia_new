@@ -180,6 +180,21 @@
   letter-spacing: 0;
   font-style: normal;
 }
+
+.side_menu{
+    @extend .font-base;
+    h3{
+        font-weight: 400;
+        font-size: 14px;
+        color: #ACACAC;
+    }
+    p{
+        font-weight: 400;
+        font-size: 12px;
+        color: #333333;
+    }
+}
+
 .montserrat{
     font-family: 'Montserrat', sans-serif;
 
