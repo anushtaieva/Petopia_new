@@ -3,15 +3,19 @@
   max-width: 1440px;
   margin: auto;
 }
+
 .menu p {
   color: #333333 !important;
 }
+
 .menu .menu_text a:hover {
-  color: rgba(42, 125, 249, 0.8078431373);
+  color: #2a7df9ce;
 }
+
 .menu .menu_text img {
   margin: 0 5px 0 5px;
 }
+
 .menu .menu_button a {
   text-decoration: none;
   padding: 6px 30px 6px 30px;
@@ -19,6 +23,7 @@
   border-radius: 6px;
   background-color: transparent;
 }
+
 .menu .menu_button .header_font_white {
   color: #2A7CF9;
 }
@@ -70,8 +75,10 @@
     display: none;
   }
 }
+
 @media (max-width: 900px) {
   .menu {
     padding-top: 80px;
   }
-}/*# sourceMappingURL=about_shop.css.map */
+}
+/*# sourceMappingURL=about_shop.css.map */
