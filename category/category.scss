@@ -193,9 +193,9 @@
   max-width: 1440px;
   padding: 0 70px;
   margin: auto;
-}
 
-.sidebar {
+
+&-sidebar {
   padding: 15px;
   max-width: 244px;
   border-right: 1px solid #E2E2E2;
@@ -402,6 +402,7 @@
       }
     }
   }
+}
 }
 
     &.active {

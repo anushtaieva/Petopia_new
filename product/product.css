@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.top_categories_adaptiv {
+.top_categories_adaptiv_button {
   display: none;
   width: 93%;
   height: 40px;
@@ -9,7 +9,7 @@
   margin: 80px 0 20px 14px;
 }
 
-.top_categories_adaptiv p {
+.top_categories_adaptiv_button p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,7 +19,7 @@
   font-weight: 500;
 }
 
-.top_categories_adaptiv p::before {
+.top_categories_adaptiv_button p::before {
   content: '';
   display: inline-block;
   width: 24px;
@@ -939,7 +939,7 @@
 }
 
 @media (max-width: 768px) {
-  .top_categories_adaptiv, .rating_row_adaptiv, .icons_adaptiv {
+  .top_categories_adaptiv_button, .rating_row_adaptiv, .icons_adaptiv {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

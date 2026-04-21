@@ -1,4 +1,4 @@
-.top_categories_adaptiv{
+.top_categories_adaptiv_button{
     display: none;
         width: 93%;
         height: 40px;
@@ -810,7 +810,7 @@
 }
 
 @media (max-width: 768px) {
-    .top_categories_adaptiv, .rating_row_adaptiv, .icons_adaptiv{
+    .top_categories_adaptiv_button, .rating_row_adaptiv, .icons_adaptiv{
         display: flex;
     }
     .product_characteristics_card{

@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="header_content_adaptiv fx-jc-sb">
-            <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-burger-menu.svg">
+            <img class="menu-toggle"src="../header_footer_fonts_flex/images/adaptiv_footer/icon-burger-menu.svg">
             <img src="../header_footer_fonts_flex/images/adaptiv_footer/icon-logo.png">
             <input type="text" class="search_input">
             <div class="cart_btn">
@@ -59,6 +59,59 @@
             </div>
         </div>
         <div class="header_line"></div>
+        <nav class="sidebar fx-column">
+
+            <div class="sidebar-header fx-jc-sb fx-ai-c">
+                <img src="../header_footer_fonts_flex/images/sidebar/icon_close.png">
+                <img src="../header_footer_fonts_flex/images/sidebar/icon_logo.png">
+                <div class="language fx-jc-sb fx-ai-c">
+                    <p class="montserrat">UA</p>
+                    <img src="../header_footer_fonts_flex/images/sidebar/arrow_down.png">
+                </div>
+            </div>
+            <div class="sidebar-catalog">
+            <div class="top_categories_adaptiv fx-ai-c fx-jc-sb">
+                <p class="header_font_white">Каталог товарів</p>
+                <img src="../main/images/main_top/arrow-down.png">
+            </div>
+            </div>
+            <div class="sidebar-user side_menu">
+                <p>Александр Александрович Александров</p>
+            </div>
+            <div class="sidebar-user_data side_menu">
+                <p class="sidebar-user_data-cart">Кошик</p>
+                <p class="sidebar-user_data-favorites">Вибране</p>
+                <p class="sidebar-user_data-info">Інформація</p>
+            </div>
+            <div class="sidebar-contacts header_content_adaptiv">
+                <div class="top_categories_adaptiv fx-ai-c fx-jc-sb">
+                    <p class="header_font_white">Контакти</p>
+                    <img src="../main/images/main_top/arrow-down.png">
+                </div>
+            </div>
+            <div class="sidebar-info side_menu">
+                <h3>Інформація</h3>
+                <ul>
+                    <li><a href="../about shop/about_shop.html">Про магазин</a></li>
+                    <li><a href="../user_agreement/user_agreement.html">Угода користувача</a></li>
+                    <li><a href="../terms_of_ordering/terms_of_ordering.html">Умови оформлення замовлення</a></li>
+                    <li><a href="../security_policy/security_policy.html">Політика безпеки</a></li>
+                    <li><a href="../delivery_and_payment/delivery_and_payment.html">Доставка та оплата</a></li>
+                    <li><a href="../return_and_exchange/return_and_exchange.html">Повернення та обмін товарів</a></li>
+                    <li><a href="../loyalty_program/loyalty_program.html">Програма лояльності</a></li>
+                    <li><a href="#">Зворотній заязок</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-dop side_menu">
+                <h3>Додатково</h3>
+                <ul>
+                    <li><a href="#">Карта сайту</a></li>
+                    <li><a href="#">Акції</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="overlay"></div>
+
     </div>
 
     <div class="menu fx-jc-sb fx-ai-c">
@@ -136,5 +189,7 @@
     <div id="cartContainer"></div>
     <script src="../cart/cart.js"></script>
     <script src="./product.js"></script>
+    <script src="../header_footer_fonts_flex/sidebar.js"></script>
+
 </body>
 </html>
